@@ -1,0 +1,8 @@
+{
+  "name": "FatriVueUI",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/FatriFE/FatriVueUI.git",
+  "author": "Star (Shun) Li <Starlee.Li@fatri.cn>",
+  "license": "MIT"
+}
