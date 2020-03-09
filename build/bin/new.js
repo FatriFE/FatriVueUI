@@ -16,11 +16,35 @@ if(!process.argv[2]) {
 }
 
 const path = require('path')
+const fs = require('fs')
 const fileSave = require('file-save')
 const uppercamelcase = require('uppercamelcase')
 const componentName = process.argv[2]  //组件名称
 const chineseName = process.argv[3] || componentName    // 组件中文名称
 const ComponentName = uppercamelcase(componentName)   // 驼峰格式的组件名称
+const PackagePath = path.resolve(__dirname, '../../packages', componentName)
+const Files = [
+    {
+        filename: 'index.js',
+        content: `import ${ComponentName} from './src/main';
+${ComponentName}.install = (Vue) => {
+    Vue.component(${ComponentName}.name, ${ComponentName})
+}
+export default ${ComponentName}`
+    },
+    {
+        filename: 'src/main.vue',
+        content: `<template>
+    <div class="fa-${componentName}"></div>
+</template>
+
+<script >
+export default {
+    name: 'Fa${ComponentName}'
+}
+</script>`
+    }
+]
 
 
 // 添加到 components.json 文件
@@ -34,3 +58,13 @@ componentsFile[componentName] = `./packages/${componentName}/index`
 fileSave(path.join(__dirname, '../../components.json'))
     .write(JSON.stringify(componentsFile, null, '  '), 'utf-8')
     .end('\n')
+
+// 创建package 文件夹及初始化组件代码
+Files.forEach(file => {
+    fileSave(path.join(PackagePath, file.filename))
+        .write(file.content, 'utf-8')
+        .end('\n')
+})
+
+
+console.log('DONE!');
