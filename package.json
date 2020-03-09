@@ -5,7 +5,7 @@
   "repository": "https://github.com/FatriFE/FatriVueUI.git",
   "author": "Star (Shun) Li <Starlee.Li@fatri.cn>",
   "license": "MIT",
-  "script": {
+  "scripts": {
     "release": "standard-version"
   },
   "gitHooks": {
@@ -16,8 +16,10 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "cz-conventional-changelog": "3.1.0",
+    "file-save": "^0.2.0",
     "lint-staged": "^10.0.8",
     "standard-version": "^7.1.0",
+    "uppercamelcase": "^3.0.0",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
     "yorkie": "^2.0.0"
