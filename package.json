@@ -1,32 +1,48 @@
 {
-  "name": "FatriVueUI",
+  "name": "fatri-vue-ui",
   "version": "1.0.0",
+  "description": "A Component Library for Vue.js",
   "main": "index.js",
   "repository": "https://github.com/FatriFE/FatriVueUI.git",
   "author": "Star (Shun) Li <Starlee.Li@fatri.cn>",
   "license": "MIT",
   "scripts": {
-    "release": "standard-version"
+    "release": "standard-version",
+    "build:file": "node build/bin/build-entry.js",
+    "dev": "webpack-dev-server --config build/webpack.demo.js"
   },
   "gitHooks": {
     "commit-msg": "commitlint -e $GIT_PARAMS"
   },
   "lint-staged": {},
   "devDependencies": {
+    "@babel/core": "^7.8.7",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.6",
     "cz-conventional-changelog": "3.1.0",
     "file-save": "^0.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "json-templater": "^1.2.0",
     "lint-staged": "^10.0.8",
     "standard-version": "^7.1.0",
     "uppercamelcase": "^3.0.0",
+    "vue-loader": "^15.9.0",
+    "vue-template-compiler": "^2.6.11",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
     "yorkie": "^2.0.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "highlight.js": "^9.18.1",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.6"
   }
 }
