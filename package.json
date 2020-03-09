@@ -4,5 +4,27 @@
   "main": "index.js",
   "repository": "https://github.com/FatriFE/FatriVueUI.git",
   "author": "Star (Shun) Li <Starlee.Li@fatri.cn>",
-  "license": "MIT"
+  "license": "MIT",
+  "script": {
+    "release": "standard-version"
+  },
+  "gitHooks": {
+    "commit-msg": "commitlint -e $GIT_PARAMS"
+  },
+  "lint-staged": {},
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "cz-conventional-changelog": "3.1.0",
+    "lint-staged": "^10.0.8",
+    "standard-version": "^7.1.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "yorkie": "^2.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
