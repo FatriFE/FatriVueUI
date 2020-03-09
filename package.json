@@ -9,7 +9,7 @@
     "release": "standard-version"
   },
   "gitHooks": {
-    "commit-msg": "npm test"
+    "commit-msg": "commitlint -e $GIT_PARAMS"
   },
   "lint-staged": {},
   "devDependencies": {
