@@ -7,9 +7,9 @@
   "author": "Star (Shun) Li <Starlee.Li@fatri.cn>",
   "license": "MIT",
   "scripts": {
-    "release": "standard-version",
-    "build:file": "node build/bin/build-entry.js",
-    "dev": "node build/bin/i18n.js && webpack-dev-server --config build/webpack.demo.js & node build/bin/template.js"
+    "build:file": "node build/bin/build-entry.js & node build/bin/i18n.js",
+    "dev": "npm run build:file && webpack-dev-server --config build/webpack.demo.js & node build/bin/template.js",
+    "release": "standard-version"
   },
   "gitHooks": {
     "commit-msg": "commitlint -e $GIT_PARAMS"
