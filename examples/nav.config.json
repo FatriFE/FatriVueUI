@@ -8,7 +8,7 @@
       "name": "开发指南",
       "children": [
         {
-          "path": "installation",
+          "path": "/installation",
           "name": "安装"
         },
         {
@@ -18,9 +18,35 @@
       ]
     },
     {
-      "name":"组件",
+      "name": "组件",
       "groups": [
-
+        {
+          "groupName": "Star Lee",
+          "list": [
+            {
+              "path": "/button",
+              "title": "Button 按钮"
+            }
+          ]
+        },
+        {
+          "groupName": "Levon He",
+          "list": [
+            {
+              "path": "/button",
+              "title": "Button 按钮"
+            }
+          ]
+        },
+        {
+          "groupName": "Linc Lin",
+          "list": [
+            {
+              "path": "/button",
+              "title": "Button 按钮"
+            }
+          ]
+        }
       ]
     }
   ]
