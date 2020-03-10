@@ -50,6 +50,35 @@ const webpackConfig = {
                         preserveWhitespace: false
                     }
                 }
+            },
+            {
+                test: /\.(scss|css)$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.md$/,
+                use: [
+                    {
+                        loader: 'vue-loader',
+                        options: {
+                            compilerOptions: {
+                                preserveWhitespace: false
+                            }
+                        }
+                    },
+                    {
+                        loader: path.resolve(__dirname, './md-loader/index.js')
+                    }
+                ]
+            },
+            {
+                test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
+                loader: 'url-loader',
+                // todo: 这种写法有待调整
+                query: {
+                    limit: 10000,
+                    name: path.posix.join('static', '[name].[hash:7].[ext]')
+                }
             }
         ]
     },
