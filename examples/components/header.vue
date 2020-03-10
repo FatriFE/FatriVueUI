@@ -11,7 +11,7 @@
                             alt="element-logo"
                             class="nav-logo">
                         <img
-                            src="/examples/assets/images/icon-only.jpg"
+                            src="/examples/assets/images/icon-only.png"
                             alt="element-logo"
                             class="nav-logo-small">
                     </slot>
