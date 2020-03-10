@@ -8,6 +8,10 @@
       "name": "开发指南",
       "children": [
         {
+          "path": "/FE",
+          "name": "公司开发者"
+        },
+        {
           "path": "/installation",
           "name": "安装"
         },
@@ -21,7 +25,7 @@
       "name": "组件",
       "groups": [
         {
-          "groupName": "Star Lee",
+          "groupName": "StarLee",
           "list": [
             {
               "path": "/button",
@@ -30,7 +34,7 @@
           ]
         },
         {
-          "groupName": "Levon He",
+          "groupName": "LevonHe",
           "list": [
             {
               "path": "/button",
@@ -39,13 +43,17 @@
           ]
         },
         {
-          "groupName": "Linc Lin",
+          "groupName": "LincLin",
           "list": [
             {
               "path": "/button",
               "title": "Button 按钮"
             }
           ]
+        },
+        {
+          "groupName": "Other",
+          "list": []
         }
       ]
     }
