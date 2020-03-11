@@ -1,5 +1,4 @@
 {
-  "input": "./packages/input/index",
-  "row": "./packages/row/index",
-  "col": "./packages/col/index"
+  "Button": "./packages/Button/index",
+  "input": "./packages/input/index"
 }

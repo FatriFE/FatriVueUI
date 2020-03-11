@@ -48,12 +48,21 @@
             {
               "path": "/button",
               "title": "Button 按钮"
+            },
+            {
+              "path": "/input",
+              "title": "Input sfsds"
             }
           ]
         },
         {
           "groupName": "Other",
-          "list": []
+          "list": [
+            {
+              "path": "/Button",
+              "title": "Button"
+            }
+          ]
         }
       ]
     }
