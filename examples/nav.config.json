@@ -36,19 +36,12 @@
         {
           "groupName": "LevonHe",
           "list": [
-            {
-              "path": "/button",
-              "title": "Button 按钮"
-            }
+
           ]
         },
         {
           "groupName": "LincLin",
           "list": [
-            {
-              "path": "/button",
-              "title": "Button 按钮"
-            },
             {
               "path": "/input",
               "title": "Input sfsds"
