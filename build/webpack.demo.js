@@ -6,6 +6,7 @@ const config = require('./config')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const ProcessBarPlugin = require('progress-bar-webpack-plugin')
 // const isProd = precess.env.NODE_ENV === 'production'
 
 const webpackConfig = {
@@ -95,6 +96,7 @@ const webpackConfig = {
       filename: './index.html',
       favicon: './examples/favicon.ico'
     }),
+    new ProcessBarPlugin(),
     new webpack.LoaderOptionsPlugin({
       vue: {
         compilerOptions: {
