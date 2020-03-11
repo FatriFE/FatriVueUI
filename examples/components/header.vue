@@ -7,11 +7,11 @@
                     <!-- logo -->
                     <slot>
                         <img
-                            src="/examples/assets/images/all.png"
+                            src="/images/all.png"
                             alt="element-logo"
                             class="nav-logo">
                         <img
-                            src="/examples/assets/images/icon-only.png"
+                            src="/images/icon-only.png"
                             alt="element-logo"
                             class="nav-logo-small">
                     </slot>

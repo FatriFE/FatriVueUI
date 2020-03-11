@@ -23,7 +23,9 @@
   "scripts": {
     "bootstrap": "yarn || npm i",
     "build:file": "node build/bin/build-entry.js & node build/bin/i18n.js",
-    "dev": "npm run build:file && webpack-dev-server --config build/webpack.demo.js & node build/bin/template.js",
+    "rm": "rimraf examples/fatri-vue-ui",
+    "dev": "npm run rm && npm run build:file && webpack-dev-server --config build/webpack.demo.js & node build/bin/template.js",
+    "deploy": "npm run build:file && cross-env NODE_ENV=production webpack --config build/webpack.demo.js && echo fatri.eleme.io>>examples/fatri-vue-ui/CNAME",
     "dist": "webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js",
     "dist:umd": "webpack --config build/webpack.conf.js",
     "dist:common": "webpack --config build/webpack.common.js",
@@ -57,6 +59,8 @@
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-vue-jsx": "^3.7.0",
     "chokidar": "^3.3.1",
+    "copy-webpack-plugin": "^5.1.1",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.4.2",
     "cz-conventional-changelog": "3.1.0",
     "eslint": "^6.8.0",
@@ -68,13 +72,17 @@
     "html-webpack-plugin": "^3.2.0",
     "json-templater": "^1.2.0",
     "lint-staged": "^10.0.8",
+    "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "prettier": "^1.19.1",
     "progress-bar-webpack-plugin": "^2.1.0",
+    "rimraf": "^3.0.2",
     "sass-loader": "^8.0.2",
     "standard-version": "^7.1.0",
     "style-loader": "^1.1.3",
     "terser-webpack-plugin": "^2.3.5",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "uppercamelcase": "^3.0.0",
     "url-loader": "^3.0.0",
     "vue-loader": "^15.9.0",
@@ -93,8 +101,10 @@
     "markdown-it-container": "^2.0.0",
     "throttle-debounce": "^2.1.0",
     "transliteration": "^2.1.8",
-    "vue": "^2.6.11",
     "vue-router": "^3.1.6"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.11"
   },
   "config": {
     "commitizen": {
