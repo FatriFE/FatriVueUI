@@ -34,7 +34,7 @@ ${ComponentName}.install = (Vue) => {
 export default ${ComponentName}`
     },
     {
-        filename: 'src/main.vue',
+        filename: 'src/main.js',
         content: `<template>
     <div class="fa-${componentName}"></div>
 </template>
