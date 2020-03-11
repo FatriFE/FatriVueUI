@@ -44,4 +44,4 @@ make new Button 按钮 用户名(例如 Star lee)
 * 使用 doc 形式来调试组件 examples/docs/zh-CN。
 * 编写完成版的组件文档。
 * 提交代码到自己的分支。
-* PR 分支到 Fork 的项目 （https://github.com/FatriFE/FatriVueUI）
+* PR 分支到 Fork 的项目 (dev) （https://github.com/FatriFE/FatriVueUI）

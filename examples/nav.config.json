@@ -35,21 +35,11 @@
         },
         {
           "groupName": "LevonHe",
-          "list": [
-            {
-              "path": "/button",
-              "title": "Button 按钮"
-            }
-          ]
+          "list": []
         },
         {
           "groupName": "LincLin",
-          "list": [
-            {
-              "path": "/button",
-              "title": "Button 按钮"
-            }
-          ]
+          "list": []
         },
         {
           "groupName": "Other",
