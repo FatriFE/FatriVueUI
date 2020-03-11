@@ -1,3 +1,6 @@
+/**
+ * Created by starlee on 2020/03/09.
+ */
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -11,7 +14,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const config = require('./config');
 
 const isProd = process.env.NODE_ENV === 'production';
-const isPlay = !!process.env.PLAY_ENV;
 
 const webpackConfig = {
     mode: process.env.NODE_ENV,
