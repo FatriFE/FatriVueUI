@@ -1,11 +1,11 @@
 <template>
-    <div class="fa-input">
-        <input type="text">
-    </div>
+  <div class="fa-input">
+    <input type="text" >
+  </div>
 </template>
 
-<script >
+<script>
 export default {
-    name: 'FaInput'
+  name: 'FaInput'
 }
 </script>

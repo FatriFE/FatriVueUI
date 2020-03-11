@@ -13,9 +13,15 @@
     "lint": "eslint src/**/*  packages/**/* build/**/* --fix"
   },
   "gitHooks": {
+    "pre-commit":  "lint-staged",
     "commit-msg": "commitlint -e $GIT_PARAMS"
   },
-  "lint-staged": {},
+  "lint-staged": {
+    ".{js|vue}": [
+      "yarn lint",
+      "git add"
+    ]
+  },
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/plugin-proposal-export-default-from": "^7.8.3",
