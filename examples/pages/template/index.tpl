@@ -291,11 +291,11 @@
       </div>
     </div>
     <div class="jumbotron" ref="indexMainImg">
-      <img src="/examples/assets/images/theme-index-blue.png" alt="">
+      <img src="/images/theme-index-blue.png" alt="">
       <div class="jumbotron-red" :style="{
            height: mainImgOffset + 'px'
          }">
-        <img src="/examples/assets/images/theme-index-red.png" alt="">
+        <img src="/images/theme-index-red.png" alt="">
       </div>
     </div>
 
@@ -303,7 +303,7 @@
       <ul class="container">
         <li>
           <div class="card">
-            <img src="/examples/assets/images/guide.png" alt="">
+            <img src="/images/guide.png" alt="">
             <h3><%= 3 ></h3>
             <p><%= 4 ></p>
             <router-link
@@ -315,7 +315,7 @@
         </li>
         <li>
           <div class="card">
-            <img src="/examples/assets/images/component.png" alt="">
+            <img src="/images/component.png" alt="">
             <h3><%= 6 ></h3>
             <p><%= 7 ></p>
             <router-link
@@ -327,7 +327,7 @@
         </li>
         <li>
           <div class="card">
-            <img src="/examples/assets/images/theme-index-icon.svg" alt="">
+            <img src="/images/theme-index-icon.svg" alt="">
             <h3><%= 10 ></h3>
             <p><%= 11 ></p>
             <router-link
@@ -339,7 +339,7 @@
         </li>
         <li>
           <div class="card">
-            <img src="/examples/assets/images/resource.png" alt="">
+            <img src="/images/resource.png" alt="">
             <h3><%= 8 ></h3>
             <p><%= 9 ></p>
             <router-link
