@@ -7,7 +7,7 @@ import VueRouter from 'vue-router'
 import routes from './route.config'
 import Fatri from 'main/index'
 import hljs from 'highlight.js'
-import { ButtonGroup, Icon, Tooltip, Row, Col, Dropdown, DropdownItem, DropdownMenu, Scrollbar, Backtop, Button } from 'element-ui'
+import { ButtonGroup, Icon, Tooltip, Row, Col, Dropdown, DropdownItem, DropdownMenu, Scrollbar, Backtop, Button, Input } from 'element-ui'
 // component
 import MainHeader from './components/header'
 import SideNav from './components/side-nav'
@@ -34,6 +34,7 @@ Vue.use(Button)
 Vue.use(Tooltip)
 Vue.use(Icon)
 Vue.use(ButtonGroup)
+Vue.use(Input)
 
 const router = new VueRouter({
   mode: 'hash',
