@@ -1,4 +1,3 @@
 {
-  "Button": "./packages/Button/index",
   "input": "./packages/input/index"
 }

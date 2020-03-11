@@ -1,4 +1,7 @@
-# 该项目的开发文档
+# FatriVueUI
+一套使用 Vue 搭建的 UI 组件库
+
+# 开发文档说明
 
 ## 开发准备
 * Fork 代码到自己的仓库。 [仓库地址](https://github.com/FatriFE/FatriVueUI)
@@ -28,8 +31,13 @@
 
 ### 脚本说明
 #### scripts 脚本
+* bootstrap   用于安装项目依赖
 * build:file  1. 用于新建组件后插入该组件到 src 的入口文件中  2. 用于更新组件文档
 * dev         用于在本地环境预览组件文档。
+* dist        用于把开发完成的组件打包成umd、CommonJS、 Component 拆分形式。 打包好的文件 lib 可以直接发布到 npm 上面用于共享
+* dist:umd    打包 UMD 格式
+* dist:common 打包 CommonJS 格式
+* dist:com    打包组件拆分格式
 * release     用于更新版本和更新日志
 
 #### make 命令
@@ -44,4 +52,4 @@ make new Button 按钮 用户名(例如 Star lee)
 * 使用 doc 形式来调试组件 examples/docs/zh-CN。
 * 编写完成版的组件文档。
 * 提交代码到自己的分支。
-* PR 分支到 Fork 的项目 （https://github.com/FatriFE/FatriVueUI）
+* PR 分支到 Fork 的项目 (dev) （https://github.com/FatriFE/FatriVueUI）
