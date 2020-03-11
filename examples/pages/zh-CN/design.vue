@@ -1,28 +1,28 @@
 <style lang="scss" scoped>
-.cards {
-  margin: 30px 0 70px;
-}
-.card {
-  background: #fbfcfd;
-  height: 204px;
-  text-align: center;
+  .cards {
+    margin: 30px 0 70px;
+  }
+  .card {
+    background: #fbfcfd;
+    height: 204px;
+    text-align: center;
 
-  img {
-    margin: 40px auto 25px;
-    width: 80px;
-    height: 80px;
+    img {
+      margin: 40px auto 25px;
+      width: 80px;
+      height: 80px;
+    }
+    h4 {
+      font-size: 18px;
+      color: #1f2d3d;
+      font-weight: normal;
+      margin: 0;
+    }
+    span {
+      font-size: 14px;
+      color: #99a9bf;
+    }
   }
-  h4 {
-    font-size: 18px;
-    color: #1f2d3d;
-    font-weight: normal;
-    margin: 0;
-  }
-  span {
-    font-size: 14px;
-    color: #99a9bf;
-  }
-}
 </style>
 <template>
   <div>
@@ -30,28 +30,28 @@
     <el-row :gutter="14" class="cards">
       <el-col :xs="12" :sm="6">
         <div class="card">
-          <img src="/examples/assets/images/consistency.png" alt="Consistency" />
+          <img src="/examples/assets/images/consistency.png" alt="Consistency">
           <h4>一致</h4>
           <span>Consistency</span>
         </div>
       </el-col>
       <el-col :xs="12" :sm="6">
         <div class="card">
-          <img src="/examples/assets/images/feedback.png" alt="Feedback" />
+          <img src="/examples/assets/images/feedback.png" alt="Feedback">
           <h4>反馈</h4>
           <span>Feedback</span>
         </div>
       </el-col>
       <el-col :xs="12" :sm="6">
         <div class="card">
-          <img src="/examples/assets/images/efficiency.png" alt="Efficiency" />
+          <img src="/examples/assets/images/efficiency.png" alt="Efficiency">
           <h4>效率</h4>
           <span>Efficiency</span>
         </div>
       </el-col>
       <el-col :xs="12" :sm="6">
         <div class="card">
-          <img src="/examples/assets/images/controllability.png" alt="Controllability" />
+          <img src="/examples/assets/images/controllability.png" alt="Controllability">
           <h4>可控</h4>
           <span>Controllability</span>
         </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="fa-input">
-    <input type="text" >
+    <input type="text" />
   </div>
 </template>
 

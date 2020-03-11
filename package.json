@@ -3,17 +3,30 @@
   "version": "1.1.0",
   "description": "A Component Library for Vue.js",
   "main": "index.js",
-  "repository": "https://github.com/FatriFE/FatriVueUI.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FatriFE/FatriVueUI.git"
+  },
   "author": "Star (Shun) Li <Starlee.Li@fatri.cn>",
+  "keywords": [
+    "vue",
+    "fatri",
+    "component",
+    "fatri-vue-ui"
+  ],
   "license": "MIT",
   "scripts": {
+    "bootstrap": "yarn || npm i",
     "build:file": "node build/bin/build-entry.js & node build/bin/i18n.js",
     "dev": "npm run build:file && webpack-dev-server --config build/webpack.demo.js & node build/bin/template.js",
     "release": "standard-version",
     "lint": "eslint src/**/*  packages/**/* build/**/* --fix"
   },
+  "bugs": {
+    "url": "https://github.com/FatriFE/FatriVueUI/issues"
+  },
   "gitHooks": {
-    "pre-commit":  "lint-staged",
+    "pre-commit": "lint-staged",
     "commit-msg": "commitlint -e $GIT_PARAMS"
   },
   "lint-staged": {
@@ -32,10 +45,13 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-component": "^1.1.1",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-vue-jsx": "^3.7.0",
     "chokidar": "^3.3.1",
     "css-loader": "^3.4.2",
     "cz-conventional-changelog": "3.1.0",
     "eslint": "^6.8.0",
+    "eslint-loader": "^3.0.3",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-vue": "^6.2.2",
     "file-loader": "^5.1.0",
@@ -57,11 +73,6 @@
     "webpack-dev-server": "^3.10.3",
     "yorkie": "^2.0.0"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "dependencies": {
     "element-ui": "^2.13.0",
     "highlight.js": "^9.18.1",
@@ -73,5 +84,10 @@
     "transliteration": "^2.1.8",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
