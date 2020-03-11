@@ -1,5 +1,3 @@
 {
-  "input": "./packages/input/index",
-  "row": "./packages/row/index",
-  "col": "./packages/col/index"
+  "input": "./packages/input/index"
 }

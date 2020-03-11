@@ -1,5 +1,7 @@
 <template>
-    <div class="fa-input"></div>
+    <div class="fa-input">
+        <input type="text">
+    </div>
 </template>
 
 <script >
