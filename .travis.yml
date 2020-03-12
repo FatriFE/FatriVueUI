@@ -5,4 +5,4 @@ branches:
   only:
     - master
 install: true
-script: echo "script success">>.log
+script: npm run pub:web
