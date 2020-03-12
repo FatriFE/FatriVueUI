@@ -35,9 +35,7 @@
         },
         {
           "groupName": "LevonHe",
-          "list": [
-
-          ]
+          "list": []
         },
         {
           "groupName": "LincLin",
@@ -45,14 +43,16 @@
             {
               "path": "/input",
               "title": "Input 输入框"
+            },
+            {
+              "path": "/select",
+              "title": "Select 下拉框"
             }
           ]
         },
         {
           "groupName": "Other",
-          "list": [
-            
-          ]
+          "list": []
         }
       ]
     }
