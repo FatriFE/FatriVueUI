@@ -7,7 +7,7 @@ import VueRouter from 'vue-router'
 import routes from './route.config'
 import Fatri from 'main/index'
 import hljs from 'highlight.js'
-import { ButtonGroup, Icon, Tooltip, Row, Col, Dropdown, DropdownItem, DropdownMenu, Scrollbar, Backtop, Button, Input } from 'element-ui'
+import { ButtonGroup, Icon, Tooltip, Row, Col, Dropdown, DropdownItem, DropdownMenu, Scrollbar, Backtop, Button, Input, Tabs, TabPane, Checkbox, CheckboxGroup, Radio, RadioGroup,Message } from 'element-ui'
 // component
 import MainHeader from './components/header'
 import SideNav from './components/side-nav'
@@ -35,6 +35,13 @@ Vue.use(Tooltip)
 Vue.use(Icon)
 Vue.use(ButtonGroup)
 Vue.use(Input)
+Vue.use(Tabs)
+Vue.use(TabPane)
+Vue.use(Checkbox)
+Vue.use(CheckboxGroup)
+Vue.use(Radio)
+Vue.use(RadioGroup)
+Vue.prototype.$message = Message
 
 const router = new VueRouter({
   mode: 'hash',

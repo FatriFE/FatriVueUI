@@ -1,3 +1,4 @@
 {
-  "input": "./packages/input/index"
+  "input": "./packages/input/index",
+  "select": "./packages/select/index"
 }
