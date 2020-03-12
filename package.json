@@ -26,7 +26,7 @@
     "rm": "rimraf examples/fatri-vue-ui",
     "dev": "npm run build:file && webpack-dev-server --config build/webpack.demo.js & node build/bin/template.js",
     "build:doc": "npm run rm && npm run build:file && cross-env NODE_ENV=production webpack --config build/webpack.demo.js && echo fatri.eleme.io>>examples/fatri-vue-ui/CNAME",
-    "pub:web": "node build/git-release.js",
+    "delpoy:web": "sh build/deploy-web.sh",
     "dist": "webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js",
     "dist:umd": "webpack --config build/webpack.conf.js",
     "dist:common": "webpack --config build/webpack.common.js",
