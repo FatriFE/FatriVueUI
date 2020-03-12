@@ -5,4 +5,4 @@ branches:
   only:
     - master
 install: true
-script: npm run delpoy:web
+script: npm run deploy:web
