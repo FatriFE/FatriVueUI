@@ -1,5 +1,6 @@
 # FatriVueUI
-一套使用 Vue 搭建的 UI 组件库
+一套使用 Vue 搭建的 UI 组件库 
+## 预览地址: [预览](http://fatrife.leesummer.cn/)
 
 # 开发文档说明
 

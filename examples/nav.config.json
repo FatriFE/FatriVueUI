@@ -30,6 +30,10 @@
             {
               "path": "/button",
               "title": "Button 按钮"
+            },
+            {
+              "path": "/switch",
+              "title": "Switch 开关"
             }
           ]
         },

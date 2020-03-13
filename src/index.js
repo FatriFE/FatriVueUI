@@ -2,10 +2,12 @@
 
 import Input from '../packages/input/index.js';
 import Select from '../packages/select/index.js';
+import Switch from '../packages/switch/index.js';
 
 const components = [
   Input,
-  Select
+  Select,
+  Switch
 ]
 
 const install = (Vue, opts) => {
@@ -22,5 +24,6 @@ export default {
     version: '1.1.0',
     install,
       Input,
-  Select
+  Select,
+  Switch
 }
