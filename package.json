@@ -42,8 +42,8 @@
     "commit-msg": "commitlint -e $GIT_PARAMS"
   },
   "lint-staged": {
-    ".{js|vue}": [
-      "yarn lint",
+    "*.{js,vue}": [
+      "eslint src/**/*  packages/**/* build/**/* --fix",
       "git add"
     ]
   },
