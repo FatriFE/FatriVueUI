@@ -1,28 +1,28 @@
 <style lang="scss" scoped>
-  .cards {
-    margin: 30px 0 70px;
-  }
-  .card {
-    background: #fbfcfd;
-    height: 204px;
-    text-align: center;
+.cards {
+margin: 30px 0 70px;
+}
+.card {
+  background: #fbfcfd;
+  height: 204px;
+  text-align: center;
 
-    img {
-      margin: 40px auto 25px;
-      width: 80px;
-      height: 80px;
-    }
-    h4 {
-      font-size: 18px;
-      color: #1f2d3d;
-      font-weight: normal;
-      margin: 0;
-    }
-    span {
-      font-size: 14px;
-      color: #99a9bf;
-    }
+  img {
+    margin: 40px auto 25px;
+    width: 80px;
+    height: 80px;
   }
+  h4 {
+    font-size: 18px;
+    color: #1f2d3d;
+    font-weight: normal;
+    margin: 0;
+  }
+  span {
+    font-size: 14px;
+    color: #99a9bf;
+  }
+}
 </style>
 <template>
   <div>

@@ -4,10 +4,10 @@
 const path = require('path')
 const Components = require('../components.json')
 
-const  externals = {}
+const externals = {}
 Object.keys(Components).forEach(function(key) {
   externals[`fatri-vue-ui/packages/${key}`] = `fatri-vue-ui/lib/${key}`
-});
+})
 
 exports.externals = externals
 
@@ -23,6 +23,6 @@ exports.vue = {
   commonjs: 'vue',
   commonjs2: 'vue',
   amd: 'vue'
-};
+}
 
 exports.jsexclude = /node_modules|utils\/popper\.js|utils\/date\.js/

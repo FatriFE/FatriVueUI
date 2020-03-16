@@ -16,13 +16,7 @@
               {{ sensor.sensorName }}
             </el-radio>
           </el-radio-group>
-          <el-checkbox
-            v-if="checkbox"
-            v-model="item.checkAll"
-            :indeterminate="item.isIndeterminate"
-            class="d2-mb-10 d2-mt-10"
-            @change="handleCheckAll($event, item.sensorList)"
-          >
+          <el-checkbox v-if="checkbox" v-model="item.checkAll" :indeterminate="item.isIndeterminate" class="d2-mb-10 d2-mt-10" @change="handleCheckAll($event, item.sensorList)">
             全选
           </el-checkbox>
           <el-checkbox-group v-if="checkbox" v-model="item.checkedItems" @change="handleCheckedItems">
@@ -32,7 +26,7 @@
           </el-checkbox-group>
         </el-tab-pane>
       </el-tabs>
-      <el-button  v-if="checkbox && deviceList.length" style="float: right" size="mini" @click="comfirm">
+      <el-button v-if="checkbox && deviceList.length" style="float: right" size="mini" @click="comfirm">
         确定
       </el-button>
     </div>
@@ -54,7 +48,7 @@ export default {
     },
     checkbox: {
       type: Boolean,
-      default: false 
+      default: false
     }
   },
   data() {
@@ -102,7 +96,7 @@ export default {
       }
       // 判断多选情况下,是否一个都没有选择
       let flag = true
-      for (let i=0; i< this.deList.length; i++) {
+      for (let i = 0; i < this.deList.length; i++) {
         if (this.deList[i].checkedItems.length) {
           this.activeName = this.deList[i].name
           this.tabIndex = i
@@ -126,18 +120,17 @@ export default {
       if (this.checkbox) {
         let checkedCount = value.length
         deList.forEach((i, index) => {
-            if (index === Number(tabIndex)) {
-                i.checkAll = checkedCount === i.sensorList.length
-                i.isIndeterminate = checkedCount > 0 && checkedCount < i.sensorList.length
-                i.checkedItems = value
-            } else {
-                i.checkedItems = []
-                i.checkAll = false
-                i.isIndeterminate = false
-            }
+          if (index === Number(tabIndex)) {
+            i.checkAll = checkedCount === i.sensorList.length
+            i.isIndeterminate = checkedCount > 0 && checkedCount < i.sensorList.length
+            i.checkedItems = value
+          } else {
+            i.checkedItems = []
+            i.checkAll = false
+            i.isIndeterminate = false
+          }
         })
-      } 
-      else {
+      } else {
         deList[tabIndex].checkedItems = []
         deList[tabIndex].checkedItems.push(value)
         this.comfirm()
@@ -147,12 +140,16 @@ export default {
       let { deList, tabIndex } = this
       deList.forEach((i, index) => {
         if (index === Number(tabIndex)) {
-            i.checkedItems = val ? list.map(item => { return item.sensorId }) : []
-            i.isIndeterminate = false
+          i.checkedItems = val
+            ? list.map(item => {
+                return item.sensorId
+              })
+            : []
+          i.isIndeterminate = false
         } else {
-            i.checkedItems = []
-            i.checkAll = false
-            i.isIndeterminate = false
+          i.checkedItems = []
+          i.checkAll = false
+          i.isIndeterminate = false
         }
       })
     },
@@ -174,7 +171,7 @@ export default {
       }
       // 多选框情况下
       else {
-        for (let i=0; i< deList.length; i++) {
+        for (let i = 0; i < deList.length; i++) {
           if (deList[i].checkedItems.length) {
             data = {
               checkedItems: deList[i].checkedItems,
@@ -199,7 +196,6 @@ export default {
   }
 }
 </script>
-
 
 <style lang="scss" scoped>
 .spcial-select {
