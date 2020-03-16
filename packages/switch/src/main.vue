@@ -47,6 +47,7 @@ export default {
         handleClick() {
             this.isActive = !this.isActive
             this.$emit('input', this.isActive)
+            this.$emit('change', this.isActive)
         }
     }
 }
@@ -63,6 +64,7 @@ export default {
         background-color: #fff;
     }
     .fa-switch {
+        user-select: none;
         display: inline-flex;
         align-items: center;
         cursor: pointer;
