@@ -1,4 +1,4 @@
-# FatriVueUI
+# @fatrife/vue-ui
 一套使用 Vue 搭建的 UI 组件库
 
 # 开发文档说明
