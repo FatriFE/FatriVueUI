@@ -1,0 +1,13 @@
+name: github actions demo
+on: push
+jobs:
+  my_first_job:
+    name: demo job
+    runs-on: ubuntu-latest
+    steps:
+      - name: print a string
+        env:
+          my_var: hi there! my name is
+          first_name: mona
+        run: |
+          echo $my_val $first_name
