@@ -1,5 +1,5 @@
 {
-  "name": "fatri-vue-ui",
+  "name": "@fatrife/vue-ui",
   "version": "1.1.0",
   "description": "A Component Library for Vue.js",
   "main": "lib/fatri-vue-ui.common.js",
@@ -12,7 +12,6 @@
     "type": "git",
     "url": "https://github.com/FatriFE/FatriVueUI.git"
   },
-  "author": "Star (Shun) Li <Starlee.Li@fatri.cn>",
   "keywords": [
     "vue",
     "fatri",
@@ -35,6 +34,7 @@
     "lint": "eslint src/**/*  packages/**/* build/**/* --fix"
   },
   "bugs": {
+    "email": "fatrife@aliyun.com",
     "url": "https://github.com/FatriFE/FatriVueUI/issues"
   },
   "gitHooks": {
