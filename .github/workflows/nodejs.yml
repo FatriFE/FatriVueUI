@@ -2,8 +2,8 @@ name: github actions demo
 on: push
 jobs:
   my_first_job:
-    name: my job
-    runs-on: linux
+    name: demo job
+    runs-on: ubuntu-latest
     steps:
       - name: print a string
         env:
