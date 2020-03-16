@@ -108,3 +108,8 @@ export default {
 | text-insert     | 文字描述放置是否放置在开关里面   | boolean    | true/false | true   |
 | size     | 组件大小   | string    | medium / small / mini | mini   |
 
+### Events
+| 事件名称 | 说明 | 回调参数 |
+|---------- |-------- |---------- |
+| change | switch 状态发生变化时的回调函数 | 新状态的值 |
+
