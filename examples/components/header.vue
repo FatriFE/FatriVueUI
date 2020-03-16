@@ -208,7 +208,6 @@ export default {
     a {
       text-decoration: none;
       color: #ffffff;
-      opacity: 0.5;
       display: block;
       padding: 0 22px;
 
