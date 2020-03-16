@@ -1,6 +1,6 @@
 {
-  "name": "fatri-vue-ui",
-  "version": "1.1.0",
+  "name": "@fatrife/vue-ui",
+  "version": "1.1.2",
   "description": "A Component Library for Vue.js",
   "main": "lib/fatri-vue-ui.common.js",
   "files": [
@@ -12,7 +12,6 @@
     "type": "git",
     "url": "https://github.com/FatriFE/FatriVueUI.git"
   },
-  "author": "Star (Shun) Li <Starlee.Li@fatri.cn>",
   "keywords": [
     "vue",
     "fatri",
@@ -23,11 +22,11 @@
   "scripts": {
     "bootstrap": "yarn || npm i",
     "build:file": "node build/bin/build-entry.js & node build/bin/i18n.js",
-    "rm": "rimraf examples/fatri-vue-ui",
+    "rm": "rimraf examples/fatri-vue-ui & rimraf lib",
     "dev": "npm run build:file && webpack-dev-server --config build/webpack.demo.js & node build/bin/template.js",
     "build:doc": "npm run rm && npm run build:file && cross-env NODE_ENV=production webpack --config build/webpack.demo.js && echo fatri.eleme.io>>examples/fatri-vue-ui/CNAME",
     "deploy:web": "npm run bootstrap&&npm run build:doc && sh build/deploy-web.sh",
-    "dist": "webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js",
+    "dist": "npm run rm && webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js",
     "dist:umd": "webpack --config build/webpack.conf.js",
     "dist:common": "webpack --config build/webpack.common.js",
     "dist:com": "webpack --config build/webpack.component.js",
@@ -35,6 +34,7 @@
     "lint": "eslint src/**/*  packages/**/* build/**/* --fix"
   },
   "bugs": {
+    "email": "fatrife@aliyun.com",
     "url": "https://github.com/FatriFE/FatriVueUI/issues"
   },
   "gitHooks": {
@@ -42,9 +42,8 @@
     "commit-msg": "commitlint -e $GIT_PARAMS"
   },
   "lint-staged": {
-    ".{js|vue}": [
-      "yarn lint",
-      "git add"
+    "*.{js,vue}": [
+      "eslint src/**/*  packages/**/* build/**/* --fix"
     ]
   },
   "devDependencies": {
@@ -102,10 +101,8 @@
     "markdown-it-container": "^2.0.0",
     "throttle-debounce": "^2.1.0",
     "transliteration": "^2.1.8",
+    "vue": "^2.6.11",
     "vue-router": "^3.1.6"
-  },
-  "peerDependencies": {
-    "vue": "^2.6.11"
   },
   "config": {
     "commitizen": {
