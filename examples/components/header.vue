@@ -2,36 +2,31 @@
   <div class="headerWrapper">
     <header class="header" ref="header">
       <div class="container">
-        <h1>
-          <router-link :to="`/${lang}`">
-            <!-- logo -->
-            <slot>
-              <img src="/images/all.png" alt="element-logo" class="nav-logo" />
-              <img src="/images/icon-only.png" alt="element-logo" class="nav-logo-small" />
-            </slot>
-          </router-link>
-        </h1>
+        <router-link :to="`/${lang}`">
+          <!-- logo -->
+          <slot>
+            <img src="/images/all.png" alt="element-logo" class="nav-logo" />
+            <img src="/images/icon-only.png" alt="element-logo" class="nav-logo-small" />
+          </slot>
+        </router-link>
         <ul class="nav">
-          <li class="nav-item">
-            <router-link active-class="active" :to="`/${lang}/guide`">{{ langConfig.guide }} </router-link>
-          </li>
           <li class="nav-item">
             <router-link active-class="active" :to="`/${lang}/component`">{{ langConfig.components }} </router-link>
           </li>
-          <!-- 语言选择器 -->
-          <li class="nav-item lang-item">
-            <el-dropdown trigger="click" class="nav-dropdown nav-lang" :class="{ 'is-active': langDropdownVisible }">
-              <span>
-                {{ displayedLang }}
-                <i class="el-icon-arrow-down el-icon--right"></i>
-              </span>
-              <el-dropdown-menu slot="dropdown" class="nav-dropdown-list" @input="handleLangDropdownToggle">
-                <el-dropdown-item v-for="(value, key) in langs" :key="key">
-                  {{ value }}
-                </el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
-          </li>
+          <!--          &lt;!&ndash; 语言选择器 &ndash;&gt;-->
+          <!--          <li class="nav-item lang-item">-->
+          <!--            <el-dropdown trigger="click" class="nav-dropdown nav-lang" :class="{ 'is-active': langDropdownVisible }">-->
+          <!--              <span>-->
+          <!--                {{ displayedLang }}-->
+          <!--                <i class="el-icon-arrow-down el-icon&#45;&#45;right"></i>-->
+          <!--              </span>-->
+          <!--              <el-dropdown-menu slot="dropdown" class="nav-dropdown-list" @input="handleLangDropdownToggle">-->
+          <!--                <el-dropdown-item v-for="(value, key) in langs" :key="key">-->
+          <!--                  {{ value }}-->
+          <!--                </el-dropdown-item>-->
+          <!--              </el-dropdown-menu>-->
+          <!--            </el-dropdown>-->
+          <!--          </li>-->
         </ul>
       </div>
     </header>
@@ -82,7 +77,7 @@ export default {
 
 .header {
   height: 80px;
-  background-color: #fff;
+  background-color: #50bfff;
   color: #fff;
   top: 0;
   left: 0;
@@ -95,6 +90,12 @@ export default {
     height: 100%;
     box-sizing: border-box;
     border-bottom: 1px solid #dcdfe6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      display: flex;
+    }
   }
 
   .nav-lang-spe {
@@ -110,7 +111,6 @@ export default {
     a {
       color: #333;
       text-decoration: none;
-      display: block;
     }
 
     span {
@@ -207,7 +207,7 @@ export default {
 
     a {
       text-decoration: none;
-      color: #1989fa;
+      color: #ffffff;
       opacity: 0.5;
       display: block;
       padding: 0 22px;
@@ -240,7 +240,7 @@ export default {
     display: block;
     width: 100%;
     font-size: 16px;
-    color: #888;
+    color: #ffffff;
     line-height: 40px;
     transition: 0.2s;
     padding-bottom: 6px;
