@@ -1,9 +1,9 @@
-# @fatrife/vue-ui
+## @fatrife/vue-ui
 一套使用 Vue 搭建的 UI 组件库
 
-# 开发文档说明
+### 开发文档说明
 
-## 开发准备
+### 开发准备
 * Fork 代码到自己的仓库。 [仓库地址](https://github.com/FatriFE/FatriVueUI)
 * clone 自己的代码到本地准备开发。
 * 安装依赖。
@@ -11,8 +11,8 @@
 
 
 
-## 项目说明
-### 项目结构
+### 项目说明
+#### 项目结构
 ```
  -build                     用于项目构建
  -examples                  项目文档目录
@@ -29,8 +29,8 @@
  -README.md                 项目说明文件
 ```
 
-### 脚本说明
-#### scripts 脚本
+#### 脚本说明
+##### scripts 脚本
 * bootstrap   用于安装项目依赖
 * build:file  1. 用于新建组件后插入该组件到 src 的入口文件中  2. 用于更新组件文档
 * dev         用于在本地环境预览组件文档。
@@ -40,11 +40,11 @@
 * dist:com    打包组件拆分格式
 * release     用于更新版本和更新日志
 
-#### make 命令
+##### make 命令
 * make new  Button 按钮 StarLee   用于新生成一个组件， 并初始化组建的源码结构、组件文档
 
 
-## 如何新开发一个组件
+### 如何新开发一个组件
 * 使用 make 命令初始化新的组件在 packages 目录中的目录和文件内容。
 ```bash
 make new Button 按钮 用户名(例如 Star lee)
