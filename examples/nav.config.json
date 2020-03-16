@@ -9,15 +9,11 @@
       "children": [
         {
           "path": "/FE",
-          "name": "公司开发者"
+          "name": "开发者文档"
         },
         {
           "path": "/installation",
-          "name": "安装"
-        },
-        {
-          "path": "/quickstart",
-          "name": "快速上手"
+          "name": "使用"
         }
       ]
     },
@@ -27,10 +23,6 @@
         {
           "groupName": "StarLee",
           "list": [
-            {
-              "path": "/button",
-              "title": "Button 按钮"
-            },
             {
               "path": "/switch",
               "title": "Switch 开关"
