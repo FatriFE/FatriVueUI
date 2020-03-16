@@ -17,7 +17,6 @@ const isProd = process.env.NODE_ENV === 'production'
 let eslintExclude = [path.resolve(process.cwd(), 'node_modules')]
 
 if (!isProd) eslintExclude.push(path.resolve(process.cwd(), 'src/index.js'))
-console.log('isProd', isProd, eslintExclude)
 
 const webpackConfig = {
   mode: process.env.NODE_ENV,
