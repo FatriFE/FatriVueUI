@@ -1,6 +1,6 @@
 {
   "name": "@fatrife/vue-ui",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A Component Library for Vue.js",
   "main": "lib/fatri-vue-ui.common.js",
   "files": [
@@ -22,11 +22,11 @@
   "scripts": {
     "bootstrap": "yarn || npm i",
     "build:file": "node build/bin/build-entry.js & node build/bin/i18n.js",
-    "rm": "rimraf examples/fatri-vue-ui",
+    "rm": "rimraf examples/fatri-vue-ui & rimraf lib",
     "dev": "npm run build:file && webpack-dev-server --config build/webpack.demo.js & node build/bin/template.js",
     "build:doc": "npm run rm && npm run build:file && cross-env NODE_ENV=production webpack --config build/webpack.demo.js && echo fatri.eleme.io>>examples/fatri-vue-ui/CNAME",
     "deploy:web": "npm run bootstrap&&npm run build:doc && sh build/deploy-web.sh",
-    "dist": "webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js",
+    "dist": "npm run rm && webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js",
     "dist:umd": "webpack --config build/webpack.conf.js",
     "dist:common": "webpack --config build/webpack.common.js",
     "dist:com": "webpack --config build/webpack.component.js",
