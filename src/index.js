@@ -4,11 +4,7 @@ import Input from '../packages/input/index.js'
 import Select from '../packages/select/index.js'
 import Switch from '../packages/switch/index.js'
 
-const components = [
-  Input,
-  Select,
-  Switch
-]
+const components = [Input, Select, Switch]
 
 const install = (Vue, opts) => {
   components.forEach(component => {
@@ -23,7 +19,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
   version: '1.1.2',
   install,
-    Input,
+  Input,
   Select,
   Switch
 }
