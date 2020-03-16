@@ -14,6 +14,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const config = require('./config')
 
 const isProd = process.env.NODE_ENV === 'production'
+let eslintExclude = [path.resolve(process.cwd(), 'node_modules')]
+
+if (!isProd) eslintExclude.push(path.resolve(process.cwd(), 'src/index.js'))
 
 const webpackConfig = {
   mode: process.env.NODE_ENV,
@@ -50,7 +53,7 @@ const webpackConfig = {
       {
         enforce: 'pre',
         test: /\.(vue|jsx?)$/,
-        exclude: /node_modules/,
+        exclude: eslintExclude,
         loader: 'eslint-loader'
       },
       {
