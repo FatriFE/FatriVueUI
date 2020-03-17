@@ -4,11 +4,13 @@
 import Input from '../packages/input/index.js'
 import Select from '../packages/select/index.js'
 import Switch from '../packages/switch/index.js'
+import DvBorder1 from '../packages/dv-border-1/index.js'
 
 const components = [
   Input,
   Select,
-  Switch
+  Switch,
+  DvBorder1
 ]
 
 const install = Vue => {
@@ -26,5 +28,6 @@ export default {
   install,
   Input,
   Select,
-  Switch
+  Switch,
+  DvBorder1
 }
