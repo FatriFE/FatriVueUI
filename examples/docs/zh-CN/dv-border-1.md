@@ -2,7 +2,7 @@
 使用 svg 制作的带有动画的边框效果组件，适用于大屏项目。
 
 ### 基本使用
-:::demo dv-border-1
+:::demo 
 ```html
 <div style="height: 200px;width: 200px" >
     <fa-dv-border-1 />
