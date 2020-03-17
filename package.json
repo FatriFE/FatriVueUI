@@ -101,8 +101,10 @@
     "markdown-it-container": "^2.0.0",
     "throttle-debounce": "^2.1.0",
     "transliteration": "^2.1.8",
-    "vue": "^2.6.11",
     "vue-router": "^3.1.6"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.11"
   },
   "config": {
     "commitizen": {
