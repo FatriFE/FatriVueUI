@@ -30,6 +30,10 @@
             {
               "path": "/dv-border-1",
               "title": "DvBorder1 大屏边框1"
+            },
+            {
+              "path": "/fa-ellipsis",
+              "title": "FaEllipsis 单行省略"
             }
           ]
         },

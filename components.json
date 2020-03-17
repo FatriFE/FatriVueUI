@@ -2,5 +2,6 @@
   "input": "./packages/input/index",
   "select": "./packages/select/index",
   "switch": "./packages/switch/index",
-  "dv-border-1": "./packages/dv-border-1/index"
+  "dv-border-1": "./packages/dv-border-1/index",
+  "fa-ellipsis": "./packages/fa-ellipsis/index"
 }
