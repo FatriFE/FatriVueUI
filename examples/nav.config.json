@@ -26,6 +26,10 @@
             {
               "path": "/switch",
               "title": "Switch 开关"
+            },
+            {
+              "path": "/dv-border-1",
+              "title": "DvBorder1 大屏边框1"
             }
           ]
         },
