@@ -34,6 +34,10 @@
             {
               "path": "/fa-ellipsis",
               "title": "FaEllipsis 单行省略"
+            },
+            {
+              "path": "/dv-scroll-table",
+              "title": "DvScrollTable 滚动表格"
             }
           ]
         },

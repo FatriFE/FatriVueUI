@@ -2,7 +2,7 @@
   <div v-if="show" class="fa-ellipsis">
     <span ref="hiddenDom" class="fa-ellipsis--hidden">{{ content }}</span>
     <el-tooltip v-if="realWidth > maxWidth" v-bind="$attrs" :content="content" v-on="$listeners">
-      <div :style="computedStyle" class="fa-ellipsis__text" :class="parseInt(Number(row)) > 1 ? 'fa-ellipsis--multi' : 'fa-ellipsis--single'">
+      <div :style="computedStyle" class="fa-ellipsis__text" :class="parseInt(Number(row)) > 1 ? 'ellipsis--multi' : 'ellipsis--single'">
         <slot></slot>
       </div>
     </el-tooltip>

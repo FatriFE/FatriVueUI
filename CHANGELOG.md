@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.4](https://github.com/FatriFE/FatriVueUI/compare/v1.1.3...v1.1.4) (2020-03-17)
+
+
+### Features
+
+* 添加 ellipsis 组件 ([09a6d10](https://github.com/FatriFE/FatriVueUI/commit/09a6d1044dba05bdbb6826a6f9763cbcbb8dca26))
+
 ### [1.1.3](https://github.com/FatriFE/FatriVueUI/compare/v1.2.0...v1.1.3) (2020-03-17)
 
 
