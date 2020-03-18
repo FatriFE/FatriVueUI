@@ -4,8 +4,13 @@
 ### 基本用法
 :::demo 
 ```html
-<fa-dv-scroll-table :config="config" style="width:500px;height:220px">
-
+<fa-dv-scroll-table 
+    style="width:500px;height:220px"
+    :config="config"  
+    :columnWidth="columnWidth" 
+    oddRowColor="rgba(0,0,0,0)" 
+    oddRowTextColor="#333333"
+>
 </fa-dv-scroll-table>
 
 <script>
@@ -25,7 +30,8 @@ export default {
                        ['行9列1', '行9列2', '行9列3'],
                        ['行10列1', '行10列2', '行10列3']
                 ],
-            }
+            },
+            columnWidth: [50, 80]
         }   
     }
 }
