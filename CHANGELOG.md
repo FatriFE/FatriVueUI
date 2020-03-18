@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.6](https://github.com/FatriFE/FatriVueUI/compare/v1.1.5...v1.1.6) (2020-03-18)
+
+
+### Features
+
+* 滚动表格组件添加背景颜色设定 ([7db70e9](https://github.com/FatriFE/FatriVueUI/commit/7db70e9dde66c1b63a4f3144239e0f597ef59f98))
+
 ### [1.1.5](https://github.com/FatriFE/FatriVueUI/compare/v1.1.4...v1.1.5) (2020-03-18)
 
 
