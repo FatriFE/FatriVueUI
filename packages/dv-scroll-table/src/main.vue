@@ -14,7 +14,7 @@
         "
         :align="aligns[i]"
         v-html="headerItem"
-      />
+      ></div>
     </div>
 
     <div v-if="mergedConfig" class="rows" :style="`height: ${height - (header.length ? headerHeight : 0)}px;`">
@@ -39,7 +39,7 @@
           :align="aligns[ci]"
           v-html="ceil"
           @click="emitEvent(ri, ci, row, ceil)"
-        />
+        ></div>
       </div>
     </div>
   </div>
