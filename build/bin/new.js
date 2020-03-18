@@ -39,7 +39,7 @@ export default ${ComponentName}`
   <div class="fa-${componentName}"></div>
 </template>
 
-<script >
+<script>
 export default {
   name: 'Fa${ComponentName}'
 }
