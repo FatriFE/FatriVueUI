@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.5](https://github.com/FatriFE/FatriVueUI/compare/v1.1.4...v1.1.5) (2020-03-18)
+
+
+### Features
+
+* 新增滚动表格组件 ([4d83ae4](https://github.com/FatriFE/FatriVueUI/commit/4d83ae4b542e530d67f4a0f8238698572618744e))
+
 ### [1.1.4](https://github.com/FatriFE/FatriVueUI/compare/v1.1.3...v1.1.4) (2020-03-17)
 
 
