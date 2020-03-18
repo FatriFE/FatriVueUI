@@ -14,7 +14,7 @@
         "
         :align="aligns[i]"
         v-html="headerItem"
-      />
+      ></div>
     </div>
 
     <div v-if="mergedConfig" class="rows" :style="`height: ${height - (header.length ? headerHeight : 0)}px;`">
@@ -27,6 +27,7 @@
           height: ${heights[ri]}px;
           line-height: ${heights[ri]}px;
           background-color: ${row.rowIndex % 2 === 0 ? evenRowColor : oddRowColor};
+          color: ${row.rowIndex % 2 === 0 ? evenRowTextColor : oddRowTextColor};
         `
         "
       >
@@ -38,7 +39,7 @@
           :align="aligns[ci]"
           v-html="ceil"
           @click="emitEvent(ri, ci, row, ceil)"
-        />
+        ></div>
       </div>
     </div>
   </div>
@@ -56,7 +57,9 @@ export default {
     rowNum: { type: [Number, String], default: 5 },
     headerColor: { type: String, default: '#00BAFF' },
     oddRowColor: { type: String, default: '#003B51' },
+    oddRowTextColor: { type: String, default: '#ffffff' },
     evenRowColor: { type: String, default: '#0A2732' },
+    evenRowTextColor: { type: String, default: '#ffffff' },
     waitTime: { type: [String, Number], default: 2000 },
     headerHeight: { type: [String, Number], default: 35 },
     columnWidth: { type: Array, default: () => [] },
@@ -88,42 +91,6 @@ export default {
          */
         rowNum: 5,
         /**
-         * @description Header background color
-         * @type {String}
-         * @default headerBGC = '#00BAFF'
-         */
-        headerBGC: '#00BAFF',
-        /**
-         * @description Odd row background color
-         * @type {String}
-         * @default oddRowBGC = '#003B51'
-         */
-        oddRowBGC: '#003B51',
-        /**
-         * @description Even row background color
-         * @type {String}
-         * @default evenRowBGC = '#003B51'
-         */
-        evenRowBGC: '#0A2732',
-        /**
-         * @description Scroll wait time
-         * @type {Number}
-         * @default waitTime = 2000
-         */
-        waitTime: 2000,
-        /**
-         * @description Header height
-         * @type {Number}
-         * @default headerHeight = 35
-         */
-        headerHeight: 35,
-        /**
-         * @description Column width
-         * @type {Array<Number>}
-         * @default columnWidth = []
-         */
-        columnWidth: [],
-        /**
          * @description Column align
          * @type {Array<String>}
          * @default align = []
@@ -141,14 +108,7 @@ export default {
          * @type {String}
          * @default indexHeader = '#'
          */
-        indexHeader: '#',
-        /**
-         * @description Carousel type
-         * @type {String}
-         * @default carousel = 'single'
-         * @example carousel = 'single' | 'page'
-         */
-        carousel: 'single'
+        indexHeader: '#'
       },
 
       mergedConfig: null,
@@ -240,13 +200,13 @@ export default {
       this.header = header
     },
     calcRowsData() {
-      let { data, index, headerBGC, rowNum } = this.mergedConfig
+      let { data, index, rowNum } = this.mergedConfig
 
       if (index) {
         data = data.map((row, i) => {
           row = [...row]
 
-          const indexTag = `<span class="index" style="background-color: ${headerBGC};">${i + 1}</span>`
+          const indexTag = `<span class="index" style="background-color: ${this.headerColor};">${i + 1}</span>`
 
           row.unshift(indexTag)
 
@@ -270,9 +230,9 @@ export default {
     calcWidths() {
       const { width, mergedConfig, rowsData } = this
 
-      const { columnWidth, header } = mergedConfig
+      const { header } = mergedConfig
 
-      const usedWidth = columnWidth.reduce((all, w) => all + w, 0)
+      const usedWidth = this.columnWidth.reduce((all, w) => all + w, 0)
 
       let columnNum = 0
       if (rowsData[0]) {
@@ -281,20 +241,22 @@ export default {
         columnNum = header.length
       }
 
-      const avgWidth = (width - usedWidth) / (columnNum - columnWidth.length)
+      const avgWidth = (width - usedWidth) / (columnNum - this.columnWidth.length)
 
       const widths = new Array(columnNum).fill(avgWidth)
 
-      this.widths = [...widths, ...columnWidth]
+      this.widths = [...this.columnWidth, ...widths]
+
+      console.log('this.widths', avgWidth, this.widths, this.columnWidth)
     },
     calcHeights(onresize = false) {
       const { height, mergedConfig, header } = this
 
-      const { headerHeight, rowNum, data } = mergedConfig
+      const { rowNum, data } = mergedConfig
 
       let allHeight = height
 
-      if (header.length) allHeight -= headerHeight
+      if (header.length) allHeight -= this.headerHeight
 
       const avgHeight = allHeight / rowNum
 
@@ -316,18 +278,18 @@ export default {
     async animation(start = false) {
       let { avgHeight, animationIndex, mergedConfig, rowsData, animation, updater } = this
 
-      const { waitTime, carousel, rowNum } = mergedConfig
+      const { rowNum } = mergedConfig
 
       const rowLength = rowsData.length
 
       if (rowNum >= rowLength) return
 
       if (start) {
-        await new Promise(resolve => setTimeout(resolve, waitTime))
+        await new Promise(resolve => setTimeout(resolve, this.waitTime))
         if (updater !== this.updater) return
       }
 
-      const animationNum = carousel === 'single' ? 1 : rowNum
+      const animationNum = this.carousel === 'single' ? 1 : rowNum
 
       let rows = rowsData.slice(animationIndex)
       rows.push(...rowsData.slice(0, animationIndex))
@@ -346,7 +308,7 @@ export default {
       if (back >= 0) animationIndex = back
 
       this.animationIndex = animationIndex
-      this.animationHandler = setTimeout(animation, waitTime - 300)
+      this.animationHandler = setTimeout(animation, this.waitTime - 300)
     },
     stopAnimation() {
       const { animationHandler, updater } = this
