@@ -207,28 +207,26 @@ export default {
   }
 }
 
-    a {
-      text-decoration: none;
-      color: #ffffff;
-      display: block;
-      padding: 0 22px;
+a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  padding: 0 22px;
 
-      &.active,
-      &:hover {
-        opacity: 1;
-      }
+  &.active,
+  &:hover {
+    opacity: 1;
+  }
 
-      &.active::after {
-        content: '';
-        display: inline-block;
-        position: absolute;
-        bottom: 0;
-        left: calc(50% - 15px);
-        width: 30px;
-        height: 2px;
-        background: #409eff;
-      }
-    }
+  &.active::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 15px);
+    width: 30px;
+    height: 2px;
+    background: #409eff;
   }
 }
 

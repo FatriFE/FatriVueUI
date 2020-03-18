@@ -2,6 +2,48 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.6](https://github.com/FatriFE/FatriVueUI/compare/v1.1.5...v1.1.6) (2020-03-18)
+
+
+### Features
+
+* 滚动表格组件添加背景颜色设定 ([7db70e9](https://github.com/FatriFE/FatriVueUI/commit/7db70e9dde66c1b63a4f3144239e0f597ef59f98))
+
+### [1.1.5](https://github.com/FatriFE/FatriVueUI/compare/v1.1.4...v1.1.5) (2020-03-18)
+
+
+### Features
+
+* 新增滚动表格组件 ([4d83ae4](https://github.com/FatriFE/FatriVueUI/commit/4d83ae4b542e530d67f4a0f8238698572618744e))
+
+### [1.1.4](https://github.com/FatriFE/FatriVueUI/compare/v1.1.3...v1.1.4) (2020-03-17)
+
+
+### Features
+
+* 添加 ellipsis 组件 ([09a6d10](https://github.com/FatriFE/FatriVueUI/commit/09a6d1044dba05bdbb6826a6f9763cbcbb8dca26))
+
+### [1.1.3](https://github.com/FatriFE/FatriVueUI/compare/v1.2.0...v1.1.3) (2020-03-17)
+
+
+### Features
+
+* 同步远端分支 ([2cc0583](https://github.com/FatriFE/FatriVueUI/commit/2cc0583515c42eee5a3560b987ae62b2d2398fa8))
+* 新增大屏边框1 ([99efbed](https://github.com/FatriFE/FatriVueUI/commit/99efbeda77c297bbf3d0fb7a036e7b022014cbf6))
+* 更新 gitignore ([6470323](https://github.com/FatriFE/FatriVueUI/commit/64703231879ae63ca6da1366386fedfe40975821))
+* 更新框架样式和导航 ([a7d1551](https://github.com/FatriFE/FatriVueUI/commit/a7d1551f7add7e0c93f717470fbc4710bc4c6ee6))
+* 更新版本 ([17e44ac](https://github.com/FatriFE/FatriVueUI/commit/17e44acb1b2c951c38a723e52b0de27341ed58fe))
+* 添加项目prettier 代码风格检查 ([6e46f58](https://github.com/FatriFE/FatriVueUI/commit/6e46f583c564a8f04305899d7ed6bf87c18f4d13))
+
+
+### Bug Fixes
+
+* conflect ([fe1be48](https://github.com/FatriFE/FatriVueUI/commit/fe1be4849954d9f52806c82e0d06c93f73a841ac))
+* merge 远端 ([f8c4f4a](https://github.com/FatriFE/FatriVueUI/commit/f8c4f4ada25983d5827b06a3e325e6c1947c3ae0))
+* test 2 ([9d62c30](https://github.com/FatriFE/FatriVueUI/commit/9d62c3082e6e72fb7d8f8657b477744db8971f77))
+* 更改 build-entry ([48677ec](https://github.com/FatriFE/FatriVueUI/commit/48677eca6618063a5f73a7cf4c4cb663c55c1944))
+* 更改 lint-staged ([e359298](https://github.com/FatriFE/FatriVueUI/commit/e359298c0b0c7df2b9793e2a61be68887e526e4e))
+
 ## [1.1.2](https://github.com/FatriFE/FatriVueUI/compare/v1.1.0...v1.2.0) (2020-03-16)
 
 

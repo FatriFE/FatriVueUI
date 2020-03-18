@@ -27,21 +27,21 @@ const PackagePath = path.resolve(__dirname, '../../packages', componentName)
 const Files = [
   {
     filename: 'index.js',
-    content: `import ${ComponentName} from './src/main';
-${ComponentName}.install = (Vue) => {
-    Vue.component(${ComponentName}.name, ${ComponentName})
+    content: `import ${ComponentName} from './src/main'
+${ComponentName}.install = Vue => {
+  Vue.component(${ComponentName}.name, ${ComponentName})
 }
 export default ${ComponentName}`
   },
   {
     filename: 'src/main.vue',
     content: `<template>
-    <div class="fa-${componentName}"></div>
+  <div class="fa-${componentName}"></div>
 </template>
 
-<script >
+<script>
 export default {
-    name: 'Fa${ComponentName}'
+  name: 'Fa${ComponentName}'
 }
 </script>`
   }
