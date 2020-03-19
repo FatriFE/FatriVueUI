@@ -1,35 +1,51 @@
 ## 安装
 
-### npm 安装
+### npm/yarn 安装
 
 推荐使用 npm 的方式安装，它能更好地和 [webpack](https://webpack.js.org/) 打包工具配合使用。
 
 ```shell
-npm i element-ui -S
+npm i @fatri/vue-ui
+yarn add @fatri/vue-ui
 ```
 
-### CDN
+### 引入 @Fatri/vue-ui
 
-目前可以通过 [unpkg.com/element-ui](https://unpkg.com/element-ui/) 获取到最新版本的资源，在页面上引入 js 和 css 文件即可开始使用。
+你可以引入整个 @Fatri/vue-ui，或是根据需要仅引入部分组件。我们先介绍如何引入完整的 @Fatri/vue-ui。
 
-```html
-<!-- 引入样式 -->
-<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-<!-- 引入组件库 -->
-<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+#### 完整引入
+在 main.js 中写入以下内容：
+
+```javascript
+import Vue from 'vue';
+import FatriUI from '@Fatri/vue-ui';
+import App from './App.vue';
+
+Vue.use(FatriUI);
+
+new Vue({
+  el: '#app',
+  render: h => h(App)
+});
 ```
 
-:::tip
-我们建议使用 CDN 引入 Element 的用户在链接地址上锁定版本，以免将来 Element 升级时受到非兼容性更新的影响。锁定版本的方法请查看 [unpkg.com](https://unpkg.com)。
-:::
+#### 单个组件引入
+如果你只希望引入部分组件，比如 Button 和 Select，那么需要在 main.js 中写入以下内容：
 
-### Hello world
+```javascript
+import Vue from 'vue';
+import { Input, Select } from '@Fatri/vue-ui';
+import App from './App.vue';
 
-通过 CDN 的方式我们可以很容易地使用 Element 写出一个 Hello world 页面。[在线演示](https://codepen.io/ziyoung/pen/rRKYpd)
+Vue.component(Button.name, Button);
+Vue.component(Select.name, Select);
+/* 或写为
+ * Vue.use(Input)
+ * Vue.use(Select)
+ */
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="Element demo" src="//codepen.io/ziyoung/embed/rRKYpd/?height=265&theme-id=light&default-tab=html" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/ziyoung/pen/rRKYpd/'>Element demo</a> by hetech
-  (<a href='https://codepen.io/ziyoung'>@ziyoung</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-
-如果是通过 npm 安装，并希望配合 webpack 使用，请阅读下一节：[快速上手](/#/zh-CN/component/quickstart)。
+new Vue({
+  el: '#app',
+  render: h => h(App)
+});
+```

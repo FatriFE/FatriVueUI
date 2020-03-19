@@ -15,15 +15,15 @@ export default {
       type: [String, Number],
       default: ''
     },
-    prependLabel:{
+    prependLabel: {
       type: String,
       default: ''
     },
-    appendLabel:{
+    appendLabel: {
       type: String,
       default: ''
     },
-    suffixIcon:{
+    suffixIcon: {
       type: String,
       default: ''
     },
@@ -43,7 +43,7 @@ export default {
     }
   },
   created() {
-    if(this.value) {
+    if (this.value) {
       let show = this.value.split('')
       if (show.length > 2 && show.length < 7) {
         show.splice(3, 0, '-')

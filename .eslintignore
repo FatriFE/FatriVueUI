@@ -1,6 +1,5 @@
-src/utils/popper.js
-src/utils/date.js
 examples/fatri-vue-ui
+examples/pages
 *.sh
 node_modules
 lib
