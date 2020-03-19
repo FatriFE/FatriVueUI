@@ -4,5 +4,6 @@
   "switch": "./packages/switch/index",
   "dv-border-1": "./packages/dv-border-1/index",
   "ellipsis": "./packages/ellipsis/index",
-  "dv-scroll-table": "./packages/dv-scroll-table/index"
+  "dv-scroll-table": "./packages/dv-scroll-table/index",
+  "ScrollNum": "./packages/scroll-num/index"
 }
