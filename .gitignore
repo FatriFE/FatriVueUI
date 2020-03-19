@@ -108,3 +108,5 @@ dist
 
 # npm pachage
 lib
+
+examples/fatri-vue-ui
