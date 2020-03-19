@@ -7,6 +7,7 @@ import Switch from '../packages/switch/index.js'
 import DvBorder1 from '../packages/dv-border-1/index.js'
 import Ellipsis from '../packages/ellipsis/index.js'
 import DvScrollTable from '../packages/dv-scroll-table/index.js'
+import ScrollNum from '../packages/scroll-num/index.js'
 
 const components = [
   Input,
@@ -14,7 +15,8 @@ const components = [
   Switch,
   DvBorder1,
   Ellipsis,
-  DvScrollTable
+  DvScrollTable,
+  ScrollNum
 ]
 
 const install = Vue => {
@@ -28,12 +30,13 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '1.1.5',
+  version: '1.1.6',
   install,
   Input,
   Select,
   Switch,
   DvBorder1,
   Ellipsis,
-  DvScrollTable
+  DvScrollTable,
+  ScrollNum
 }
