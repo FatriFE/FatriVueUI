@@ -55,6 +55,10 @@
             {
               "path": "/select",
               "title": "Select 下拉框"
+            },
+            {
+              "path": "/scroll-num",
+              "title": "ScrollNum 滚动数字"
             }
           ]
         },
