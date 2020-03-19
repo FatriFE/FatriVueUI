@@ -9,15 +9,11 @@
       "children": [
         {
           "path": "/FE",
-          "name": "公司开发者"
+          "name": "开发者文档"
         },
         {
           "path": "/installation",
-          "name": "安装"
-        },
-        {
-          "path": "/quickstart",
-          "name": "快速上手"
+          "name": "使用"
         }
       ]
     },
@@ -28,16 +24,26 @@
           "groupName": "StarLee",
           "list": [
             {
-              "path": "/button",
-              "title": "Button 按钮"
+              "path": "/switch",
+              "title": "Switch 开关"
+            },
+            {
+              "path": "/dv-border-1",
+              "title": "DvBorder1 大屏边框1"
+            },
+            {
+              "path": "/fa-ellipsis",
+              "title": "FaEllipsis 单行省略"
+            },
+            {
+              "path": "/dv-scroll-table",
+              "title": "DvScrollTable 滚动表格"
             }
           ]
         },
         {
           "groupName": "LevonHe",
-          "list": [
-
-          ]
+          "list": []
         },
         {
           "groupName": "LincLin",
@@ -45,14 +51,16 @@
             {
               "path": "/input",
               "title": "Input 输入框"
+            },
+            {
+              "path": "/select",
+              "title": "Select 下拉框"
             }
           ]
         },
         {
           "groupName": "Other",
-          "list": [
-            
-          ]
+          "list": []
         }
       ]
     }
