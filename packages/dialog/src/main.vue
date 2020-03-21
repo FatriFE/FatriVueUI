@@ -1,8 +1,13 @@
 <template>
-  <el-dialog title="应急预警电梯" custom-class="fa-dv-dialog" :visible.sync="show" @close="$emit('update:visible', false)">
-    <div>
-      dsdsds
-      <p>sdsds</p>
+  <el-dialog v-bind="$attrs" v-on="listeners" custom-class="fa-dv-dialog" :visible.sync="show" @close="$emit('update:visible', false)">
+    <div slot="title" v-if="!$attrs.title && $slots.title" class="el-dialog__title">
+      <slot name="title"></slot>
+    </div>
+    <template v-slot:default>
+      <slot></slot>
+    </template>
+    <div slot="footer" v-if="$slots.footer">
+      <slot name="footer"></slot>
     </div>
   </el-dialog>
 </template>
@@ -10,7 +15,8 @@
 import DialogMixins from 'fatri-vue-ui/src/mixins/dialog'
 export default {
   name: 'FaDialog',
-  mixins: [DialogMixins]
+  mixins: [DialogMixins],
+  inheritAttrs: false
 }
 </script>
 
@@ -48,6 +54,11 @@ export default {
   }
   .el-dialog__body {
     padding: 30px 50px 42px;
+  }
+  .el-dialog__footer {
+    padding: 10px 50px 20px;
+    text-align: left;
+    color: #ffffff;
   }
 }
 </style>
