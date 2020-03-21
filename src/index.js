@@ -8,6 +8,7 @@ import DvBorder1 from '../packages/dv-border-1/index.js'
 import Ellipsis from '../packages/ellipsis/index.js'
 import DvScrollTable from '../packages/dv-scroll-table/index.js'
 import ScrollNum from '../packages/scroll-num/index.js'
+import Dialog from '../packages/dialog/index.js'
 
 const components = [
   Input,
@@ -16,7 +17,8 @@ const components = [
   DvBorder1,
   Ellipsis,
   DvScrollTable,
-  ScrollNum
+  ScrollNum,
+  Dialog
 ]
 
 const install = Vue => {
@@ -38,5 +40,6 @@ export default {
   DvBorder1,
   Ellipsis,
   DvScrollTable,
-  ScrollNum
+  ScrollNum,
+  Dialog
 }
