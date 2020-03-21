@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/FatriFE/FatriVueUI/compare/v1.1.7...v1.2.0) (2020-03-21)
+
+
+### Features
+
+* 完善dialog 属性、slot继承 ([54dbd2c](https://github.com/FatriFE/FatriVueUI/commit/54dbd2ca1921b94cdefdeed87ddbd927c71af6ed))
+
 ### [1.1.7](https://github.com/FatriFE/FatriVueUI/compare/v1.1.6...v1.1.7) (2020-03-21)
 
 
