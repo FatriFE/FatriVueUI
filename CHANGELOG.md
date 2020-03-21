@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.7](https://github.com/FatriFE/FatriVueUI/compare/v1.1.6...v1.1.7) (2020-03-21)
+
+
+### Features
+
+* fix ([a9d5a7b](https://github.com/FatriFE/FatriVueUI/commit/a9d5a7b0b67e81972577db8dfb1ae8277c8372e9))
+* updated ([53b576a](https://github.com/FatriFE/FatriVueUI/commit/53b576a24f61db5d3a0d7199ddb5e8eada21afba))
+* 删除 .github 文件 ([bd38fd5](https://github.com/FatriFE/FatriVueUI/commit/bd38fd5029b9039c1fc6f3cb1d048b6d2bbb8640))
+* 新增大屏dialog 组件 &&删除多余图片 ([19883c8](https://github.com/FatriFE/FatriVueUI/commit/19883c88fb6ed66aa5b5797e7f06b9787fe7fee4))
+* 新增电话号码输入框 ([136f150](https://github.com/FatriFE/FatriVueUI/commit/136f150b73a59c97f805143172d043d7881686d4))
+* 更新dialog 背景 ([dbc2129](https://github.com/FatriFE/FatriVueUI/commit/dbc2129d78613b05e68a14170946daf054ae5c72))
+* 更新dialog 背景尺寸 ([8ef6f80](https://github.com/FatriFE/FatriVueUI/commit/8ef6f8031301402a263023c835703bde434cee14))
+* 添加滚动数字 ([d2cdb24](https://github.com/FatriFE/FatriVueUI/commit/d2cdb24d74d59fc4b56eeaba794afc97057adaa5))
+* 添加特殊下拉框 ([af71ac7](https://github.com/FatriFE/FatriVueUI/commit/af71ac7cf9afe5cb84f64c0c20f13d911c272298))
+
+
+### Bug Fixes
+
+* conflect dev ([82ae69f](https://github.com/FatriFE/FatriVueUI/commit/82ae69f8b4cd4faf316f6b2c9c33ee34d577699a))
+* 更改vue 依赖位置 ([dd2570d](https://github.com/FatriFE/FatriVueUI/commit/dd2570d5533fa2874446ef31905f28e00fea73cc))
+
 ### [1.1.6](https://github.com/FatriFE/FatriVueUI/compare/v1.1.5...v1.1.6) (2020-03-18)
 
 

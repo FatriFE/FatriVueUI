@@ -1,6 +1,6 @@
 {
   "name": "@fatrife/vue-ui",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "A Component Library for Vue.js",
   "main": "lib/fatri-vue-ui.common.js",
   "files": [
@@ -104,9 +104,6 @@
     "throttle-debounce": "^2.1.0",
     "transliteration": "^2.1.8",
     "vue-router": "^3.1.6",
-    "vue": "^2.6.11"
-  },
-  "peerDependencies": {
     "vue": "^2.6.11"
   },
   "peerDependencies": {
