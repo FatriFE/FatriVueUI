@@ -187,3 +187,16 @@
 ```
 :::
 
+
+
+### Attributes
+| 参数          | 说明          | 类型    | 可选值 | 默认值   |
+|---------------|--------------|---------|-------|----------|
+| label         | 输入框前置内容 | String  |   -   | '选择设备类型'|
+| checkbox      | 切换单选/多选  | Boolean | true/false | false  |
+| deviceList    | 传入数据数组   | Array  |   -    | [] , 参照例子格式 |
+
+### Events
+| 事件名称 | 说明 | 回调参数 |
+|---------- |-------- |---------- |
+| checked | 选中状态发生变化时的回调函数 | 返回值是当前选中的 typeId 和 checkedItems 数组组合的对象,checkedItems数组内为当前 typeId 下选中的 sensorId  |
