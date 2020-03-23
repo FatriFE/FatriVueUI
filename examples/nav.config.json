@@ -38,6 +38,10 @@
             {
               "path": "/dv-scroll-table",
               "title": "DvScrollTable 滚动表格"
+            },
+            {
+              "path": "/dialog",
+              "title": "Dialog 弹出框"
             }
           ]
         },

@@ -5,5 +5,6 @@
   "dv-border-1": "./packages/dv-border-1/index",
   "ellipsis": "./packages/ellipsis/index",
   "dv-scroll-table": "./packages/dv-scroll-table/index",
-  "ScrollNum": "./packages/scroll-num/index"
+  "scroll-num": "./packages/scroll-num/index",
+  "dialog": "./packages/dialog/index"
 }
