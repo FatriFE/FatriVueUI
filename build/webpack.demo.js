@@ -8,7 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const config = require('./config')
@@ -120,7 +120,7 @@ const webpackConfig = {
   optimization: {
     minimizer: []
   },
-  devtool: '#eval-source-map'
+  devtool: 'source-map'
 }
 
 if (isProd) {
@@ -135,13 +135,14 @@ if (isProd) {
     })
   )
   webpackConfig.optimization.minimizer.push(
-    new UglifyJsPlugin({
-      cache: true,
-      parallel: true,
-      sourceMap: false,
-      compress: {
-        warnings: false,
-        drop_console: true
+    new TerserPlugin({
+      terserOptions: {
+        sourceMap: true,
+        compress: {
+          drop_console: true,
+          drop_debugger: false,
+          pure_funcs: ['console.log'] // 移除console
+        }
       }
     }),
     new OptimizeCSSAssetsPlugin({})
