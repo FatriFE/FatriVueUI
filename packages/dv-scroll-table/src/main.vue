@@ -1,35 +1,27 @@
 <template>
   <div class="dv-scroll-board" :ref="ref">
-    <div class="header" v-if="header.length && mergedConfig" :style="`background-color: ${headerColor};`">
+    <div class="header" v-if="header.length" :style="`background-color: ${headerColor};`">
       <div
         class="header-item"
         v-for="(headerItem, i) in header"
         :key="headerItem + i"
-        :style="
-          `
-          height: ${headerHeight}px;
-          line-height: ${headerHeight}px;
-          width: ${widths[i]}px;
-        `
-        "
+        :style="{ height: `${headerHeight}px`, lineHeight: `${headerHeight}px`, width: `widths[i]}px` }"
         :align="aligns[i]"
         v-html="headerItem"
       ></div>
     </div>
 
-    <div v-if="mergedConfig" class="rows" :style="`height: ${height - (header.length ? headerHeight : 0)}px;`">
+    <div class="rows" :style="`height: ${height - (header.length ? headerHeight : 0)}px;`">
       <div
         class="row-item"
         v-for="(row, ri) in rows"
         :key="row.toString() + row.scroll"
-        :style="
-          `
-          height: ${heights[ri]}px;
-          line-height: ${heights[ri]}px;
-          background-color: ${row.rowIndex % 2 === 0 ? evenRowColor : oddRowColor};
-          color: ${row.rowIndex % 2 === 0 ? evenRowTextColor : oddRowTextColor};
-        `
-        "
+        :style="{
+          height: `${heights[ri]}px`,
+          lineHeight: `${heights[ri]}px`,
+          backgroundColor: row.rowIndex % 2 === 0 ? evenRowColor : oddRowColor,
+          color: row.rowIndex % 2 === 0 ? evenRowTextColor : oddRowTextColor
+        }"
       >
         <div
           class="ceil"
@@ -52,8 +44,8 @@ export default {
   mixins: [autoResize],
   props: {
     config: { type: Object, default: () => ({}) },
-    // header: { type: Array, default: () => [] },
-    // data: { type: Array, default: () => [] },
+    header: { type: Array, default: () => [] },
+    data: { type: Array, default: () => [] },
     rowNum: { type: [Number, String], default: 5 },
     headerColor: { type: String, default: '#00BAFF' },
     oddRowColor: { type: String, default: '#003B51' },
@@ -69,176 +61,56 @@ export default {
   data() {
     return {
       ref: 'scroll-board',
-
-      defaultConfig: {
-        /**
-         * @description Board header
-         * @type {Array<String>}
-         * @default header = []
-         * @example header = ['column1', 'column2', 'column3']
-         */
-        header: [],
-        /**
-         * @description Board data
-         * @type {Array<Array>}
-         * @default data = []
-         */
-        data: [],
-        /**
-         * @description Row num
-         * @type {Number}
-         * @default rowNum = 5
-         */
-        rowNum: 5,
-        /**
-         * @description Column align
-         * @type {Array<String>}
-         * @default align = []
-         * @example align = ['left', 'center', 'right']
-         */
-        align: [],
-        /**
-         * @description Show index
-         * @type {Boolean}
-         * @default index = false
-         */
-        index: false,
-        /**
-         * @description index Header
-         * @type {String}
-         * @default indexHeader = '#'
-         */
-        indexHeader: '#'
-      },
-
-      mergedConfig: null,
-
-      header: [],
-
       rowsData: [],
-
       rows: [],
-
       widths: [],
-
       heights: [],
-
       avgHeight: 0,
-
       aligns: [],
-
       animationIndex: 0,
-
       animationHandler: '',
-
       updater: 0
     }
   },
   watch: {
-    config() {
-      const { stopAnimation, calcData } = this
-
-      stopAnimation()
-
-      calcData()
+    data: {
+      handler(val) {
+        const { stopAnimation } = this
+        stopAnimation()
+        this.calcData()
+      },
+      deep: true
     }
   },
   methods: {
     afterAutoResizeMixinInit() {
-      const { calcData } = this
-
-      calcData()
+      this.calcData()
     },
     onResize() {
-      const { mergedConfig, calcWidths, calcHeights } = this
-
-      if (!mergedConfig) return
-
-      calcWidths()
-
-      calcHeights()
+      this.calcWidths()
+      this.calcHeights()
     },
     calcData() {
-      const { mergeConfig, calcHeaderData, calcRowsData } = this
-
-      mergeConfig()
-
-      calcHeaderData()
-
-      calcRowsData()
-
-      const { calcWidths, calcHeights, calcAligns } = this
-
-      calcWidths()
-
-      calcHeights()
-
-      calcAligns()
-
-      const { animation } = this
-
-      animation(true)
-    },
-    mergeConfig() {
-      let { config, defaultConfig } = this
-
-      this.mergedConfig = { ...defaultConfig, ...config }
-    },
-    calcHeaderData() {
-      let { header, index, indexHeader } = this.mergedConfig
-
-      if (!header.length) {
-        this.header = []
-
-        return
-      }
-
-      header = [...header]
-
-      if (index) header.unshift(indexHeader)
-
-      this.header = header
+      this.calcRowsData()
+      this.calcWidths()
+      this.calcHeights()
+      this.calcAligns()
+      this.animation(true)
     },
     calcRowsData() {
-      let { data, index, rowNum } = this.mergedConfig
-
-      if (index) {
-        data = data.map((row, i) => {
-          row = [...row]
-
-          const indexTag = `<span class="index" style="background-color: ${this.headerColor};">${i + 1}</span>`
-
-          row.unshift(indexTag)
-
-          return row
-        })
-      }
-
-      data = data.map((ceils, i) => ({ ceils, rowIndex: i }))
-
-      const rowLength = data.length
-
-      if (rowLength > rowNum && rowLength < 2 * rowNum) {
-        data = [...data, ...data]
-      }
-
-      data = data.map((d, i) => ({ ...d, scroll: i }))
-
-      this.rowsData = data
-      this.rows = data
+      this.rowsData = this.data.map((ceils, i) => ({ ceils, rowIndex: i, scroll: i }))
+      this.rows = this.data.map((ceils, i) => ({ ceils, rowIndex: i, scroll: i }))
     },
     calcWidths() {
-      const { width, mergedConfig, rowsData } = this
-
-      const { header } = mergedConfig
+      const { width, rowsData } = this
 
       const usedWidth = this.columnWidth.reduce((all, w) => all + w, 0)
 
       let columnNum = 0
       if (rowsData[0]) {
         columnNum = rowsData[0].ceils.length
-      } else if (header.length) {
-        columnNum = header.length
+      } else if (this.header.length) {
+        columnNum = this.header.length
       }
 
       const avgWidth = (width - usedWidth) / (columnNum - this.columnWidth.length)
@@ -246,50 +118,38 @@ export default {
       const widths = new Array(columnNum).fill(avgWidth)
 
       this.widths = [...this.columnWidth, ...widths]
-
-      console.log('this.widths', avgWidth, this.widths, this.columnWidth)
     },
     calcHeights(onresize = false) {
-      const { height, mergedConfig, header } = this
-
-      const { rowNum, data } = mergedConfig
+      const { height } = this
 
       let allHeight = height
 
-      if (header.length) allHeight -= this.headerHeight
+      if (this.header.length) allHeight -= this.headerHeight
 
-      const avgHeight = allHeight / rowNum
+      const avgHeight = allHeight / this.rowNum
 
       this.avgHeight = avgHeight
 
-      if (!onresize) this.heights = new Array(data.length).fill(avgHeight)
+      if (!onresize) this.heights = new Array(this.data.length).fill(avgHeight)
     },
     calcAligns() {
-      const { header, mergedConfig } = this
-
-      const columnNum = header.length
-
+      const columnNum = this.header.length
       let aligns = new Array(columnNum).fill('left')
-
-      const { align } = mergedConfig
-
-      this.aligns = [...aligns, ...align]
+      this.aligns = [...aligns, ...this.align]
     },
     async animation(start = false) {
-      let { avgHeight, animationIndex, mergedConfig, rowsData, animation, updater } = this
-
-      const { rowNum } = mergedConfig
+      let { avgHeight, animationIndex, rowsData, animation, updater } = this
 
       const rowLength = rowsData.length
 
-      if (rowNum >= rowLength) return
+      if (this.rowNum >= rowLength) return
 
       if (start) {
         await new Promise(resolve => setTimeout(resolve, this.waitTime))
         if (updater !== this.updater) return
       }
 
-      const animationNum = this.carousel === 'single' ? 1 : rowNum
+      const animationNum = this.carousel === 'single' ? 1 : this.rowNum
 
       let rows = rowsData.slice(animationIndex)
       rows.push(...rowsData.slice(0, animationIndex))
@@ -331,9 +191,7 @@ export default {
     }
   },
   destroyed() {
-    const { stopAnimation } = this
-
-    stopAnimation()
+    this.stopAnimation()
   }
 }
 </script>

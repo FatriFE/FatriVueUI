@@ -1,5 +1,5 @@
 <template>
-  <el-dialog v-bind="$attrs" v-on="listeners" custom-class="fa-dv-dialog" :visible.sync="show" @close="$emit('update:visible', false)">
+  <el-dialog v-bind="$attrs" v-on="$listeners" custom-class="fa-dv-dialog" :visible.sync="show" @close="$emit('update:visible', false)">
     <div slot="title" v-if="!$attrs.title && $slots.title" class="el-dialog__title">
       <slot name="title"></slot>
     </div>
