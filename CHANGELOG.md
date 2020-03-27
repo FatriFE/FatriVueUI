@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.11](https://github.com/FatriFE/FatriVueUI/compare/v1.1.10...v1.1.11) (2020-03-27)
+
+
+### Features
+
+* 添加 scroll-table 的响应 ([1490efd](https://github.com/FatriFE/FatriVueUI/commit/1490efd94cec5f2cf9f5d9a7fc32fef9e8bcbb81))
+
+### [1.1.10](https://github.com/FatriFE/FatriVueUI/compare/v1.1.9...v1.1.10) (2020-03-27)
+
+
+### Features
+
+* 优化 scroll-table 组件 ([85586a9](https://github.com/FatriFE/FatriVueUI/commit/85586a92153b53a2a95b48d69173a29a074ed379))
+
+### [1.1.9](https://github.com/FatriFE/FatriVueUI/compare/v1.1.8...v1.1.9) (2020-03-21)
+
+
+### Bug Fixes
+
+* 解决dialog组件中报错问题和更新v-slot 写法 ([db56251](https://github.com/FatriFE/FatriVueUI/commit/db562513b6aaefdb476eafd2a25069eb52c237d6))
+
+## [1.1.8](https://github.com/FatriFE/FatriVueUI/compare/v1.1.7...v1.1.8) (2020-03-21)
+
+
+### Features
+
+* 完善dialog 属性、slot继承 ([54dbd2c](https://github.com/FatriFE/FatriVueUI/commit/54dbd2ca1921b94cdefdeed87ddbd927c71af6ed))
+
 ### [1.1.7](https://github.com/FatriFE/FatriVueUI/compare/v1.1.6...v1.1.7) (2020-03-21)
 
 

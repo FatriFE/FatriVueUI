@@ -138,7 +138,11 @@ if (isProd) {
     new UglifyJsPlugin({
       cache: true,
       parallel: true,
-      sourceMap: false
+      sourceMap: false,
+      compress: {
+        warnings: false,
+        drop_console: true
+      }
     }),
     new OptimizeCSSAssetsPlugin({})
   )
