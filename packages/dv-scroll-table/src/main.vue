@@ -5,13 +5,7 @@
         class="header-item"
         v-for="(headerItem, i) in header"
         :key="headerItem + i"
-        :style="
-          `
-          height: ${headerHeight}px;
-          line-height: ${headerHeight}px;
-          width: ${widths[i]}px;
-        `
-        "
+        :style="{ height: `${headerHeight}px`, lineHeight: `${headerHeight}px`, width: `widths[i]}px` }"
         :align="aligns[i]"
         v-html="headerItem"
       ></div>
@@ -22,14 +16,12 @@
         class="row-item"
         v-for="(row, ri) in rows"
         :key="row.toString() + row.scroll"
-        :style="
-          `
-          height: ${heights[ri]}px;
-          line-height: ${heights[ri]}px;
-          background-color: ${row.rowIndex % 2 === 0 ? evenRowColor : oddRowColor};
-          color: ${row.rowIndex % 2 === 0 ? evenRowTextColor : oddRowTextColor};
-        `
-        "
+        :style="{
+          height: `${heights[ri]}px`,
+          lineHeight: `${heights[ri]}px`,
+          backgroundColor: row.rowIndex % 2 === 0 ? evenRowColor : oddRowColor,
+          color: row.rowIndex % 2 === 0 ? evenRowTextColor : oddRowTextColor
+        }"
       >
         <div
           class="ceil"

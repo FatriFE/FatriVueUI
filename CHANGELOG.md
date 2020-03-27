@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.13](https://github.com/FatriFE/FatriVueUI/compare/v1.1.12...v1.1.13) (2020-03-27)
+
+
+### Bug Fixes
+
+* 改写scroll table 组件中 style 写法 ([35b3c71](https://github.com/FatriFE/FatriVueUI/commit/35b3c71a1f5f972c7f1f6e6e35696b55010baf5c))
+
+### [1.1.12](https://github.com/FatriFE/FatriVueUI/compare/v1.1.11...v1.1.12) (2020-03-27)
+
+
+### Bug Fixes
+
+* 将scroll-table props 中的config 参数分别提取到一级 props ([6ba5c62](https://github.com/FatriFE/FatriVueUI/commit/6ba5c62519c2ce89abc328b3e5973187ded8819f))
+
 ### [1.1.11](https://github.com/FatriFE/FatriVueUI/compare/v1.1.10...v1.1.11) (2020-03-27)
 
 
