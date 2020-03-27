@@ -6,7 +6,9 @@
 ```html
 <fa-dv-scroll-table 
     style="width:500px;height:220px"
-    :config="config"  
+    :header="header"
+    :config="config" 
+    :rowNum="rowNum" 
     :columnWidth="columnWidth" 
     oddRowColor="rgba(0,0,0,0)" 
     oddRowTextColor="#333333"
@@ -17,6 +19,7 @@
 export default {
     data() {
         return {
+            header: ["AAA", 'bbb', 'CCC'],
             config: {
                 data: [
                    ['行1列1', '行1列2', '行1列3'],
@@ -31,7 +34,8 @@ export default {
                        ['行10列1', '行10列2', '行10列3']
                 ],
             },
-            columnWidth: [50, 80]
+            columnWidth: [50, 80],
+            rowNum: 3
         }   
     }
 }

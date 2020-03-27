@@ -32,7 +32,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '1.1.7',
+  version: '1.1.9',
   install,
   Input,
   Select,
