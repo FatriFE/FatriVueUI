@@ -3,9 +3,9 @@
 ```html
 <el-button @click="show = !show">切换弹出框状态</el-button>
 <fa-dialog :visible.sync="show">
-    <tempalte slot="title">弹出框标题</tempalte>
+    <template v-slot:title>弹出框标题</template>
     body
-    <template slot="footer">footer</template>
+    <template v-slot:footer>footer</template>
 </fa-dialog>
 
 <script>

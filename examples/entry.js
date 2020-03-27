@@ -71,8 +71,6 @@ const router = new VueRouter({
   routes
 })
 
-console.log('vue router', routes)
-
 router.afterEach(route => {
   Vue.nextTick(() => {
     const blocks = document.querySelectorAll('pre code:not(.hljs)')
