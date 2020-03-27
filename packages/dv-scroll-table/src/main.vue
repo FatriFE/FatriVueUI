@@ -91,19 +91,18 @@ export default {
     }
   },
   watch: {
-    config() {
-      const { stopAnimation, calcData } = this
-
-      stopAnimation()
-
-      calcData()
+    config: {
+      handler(val) {
+        const { stopAnimation, calcData } = this
+        stopAnimation()
+        calcData()
+      },
+      deep: true
     }
   },
   methods: {
     afterAutoResizeMixinInit() {
-      const { calcData } = this
-
-      calcData()
+      this.calcData()
     },
     onResize() {
       const { mergedConfig, calcWidths, calcHeights } = this
@@ -252,8 +251,6 @@ export default {
     }
   },
   destroyed() {
-    const { stopAnimation } = this
-
     stopAnimation()
   }
 }
