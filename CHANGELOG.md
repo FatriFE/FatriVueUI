@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.11](https://github.com/FatriFE/FatriVueUI/compare/v1.1.10...v1.1.11) (2020-03-27)
+
+
+### Features
+
+* 添加 scroll-table 的响应 ([1490efd](https://github.com/FatriFE/FatriVueUI/commit/1490efd94cec5f2cf9f5d9a7fc32fef9e8bcbb81))
+
 ### [1.1.10](https://github.com/FatriFE/FatriVueUI/compare/v1.1.9...v1.1.10) (2020-03-27)
 
 
