@@ -1,6 +1,6 @@
 <template>
   <div class="dv-scroll-board" :ref="ref">
-    <div class="header" v-if="header.length && mergedConfig" :style="`background-color: ${headerColor};`">
+    <div class="header" v-if="header.length" :style="`background-color: ${headerColor};`">
       <div
         class="header-item"
         v-for="(headerItem, i) in header"
@@ -17,7 +17,7 @@
       ></div>
     </div>
 
-    <div v-if="mergedConfig" class="rows" :style="`height: ${height - (header.length ? headerHeight : 0)}px;`">
+    <div class="rows" :style="`height: ${height - (header.length ? headerHeight : 0)}px;`">
       <div
         class="row-item"
         v-for="(row, ri) in rows"
@@ -53,7 +53,7 @@ export default {
   props: {
     config: { type: Object, default: () => ({}) },
     header: { type: Array, default: () => [] },
-    // data: { type: Array, default: () => [] },
+    data: { type: Array, default: () => [] },
     rowNum: { type: [Number, String], default: 5 },
     headerColor: { type: String, default: '#00BAFF' },
     oddRowColor: { type: String, default: '#003B51' },
@@ -69,16 +69,6 @@ export default {
   data() {
     return {
       ref: 'scroll-board',
-
-      defaultConfig: {
-        /**
-         * @description Board data
-         * @type {Array<Array>}
-         * @default data = []
-         */
-        data: []
-      },
-      mergedConfig: null,
       rowsData: [],
       rows: [],
       widths: [],
@@ -91,11 +81,11 @@ export default {
     }
   },
   watch: {
-    config: {
+    data: {
       handler(val) {
-        const { stopAnimation, calcData } = this
+        const { stopAnimation } = this
         stopAnimation()
-        calcData()
+        this.calcData()
       },
       deep: true
     }
@@ -105,66 +95,30 @@ export default {
       this.calcData()
     },
     onResize() {
-      const { mergedConfig, calcWidths, calcHeights } = this
-
-      if (!mergedConfig) return
-
-      calcWidths()
-
-      calcHeights()
+      this.calcWidths()
+      this.calcHeights()
     },
     calcData() {
-      const { mergeConfig, calcRowsData } = this
-
-      mergeConfig()
-
-      calcRowsData()
-
-      const { calcWidths, calcHeights, calcAligns } = this
-
-      calcWidths()
-
-      calcHeights()
-
-      calcAligns()
-
-      const { animation } = this
-
-      animation(true)
-    },
-    mergeConfig() {
-      let { config, defaultConfig } = this
-
-      this.mergedConfig = { ...defaultConfig, ...config }
+      this.calcRowsData()
+      this.calcWidths()
+      this.calcHeights()
+      this.calcAligns()
+      this.animation(true)
     },
     calcRowsData() {
-      let { data } = this.mergedConfig
-
-      data = data.map((ceils, i) => ({ ceils, rowIndex: i }))
-
-      const rowLength = data.length
-
-      if (rowLength > this.rowNum && rowLength < 2 * this.rowNum) {
-        data = [...data, ...data]
-      }
-
-      data = data.map((d, i) => ({ ...d, scroll: i }))
-
-      this.rowsData = data
-      this.rows = data
+      this.rowsData = this.data.map((ceils, i) => ({ ceils, rowIndex: i, scroll: i }))
+      this.rows = this.data.map((ceils, i) => ({ ceils, rowIndex: i, scroll: i }))
     },
     calcWidths() {
-      const { width, mergedConfig, rowsData } = this
-
-      const { header } = mergedConfig
+      const { width, rowsData } = this
 
       const usedWidth = this.columnWidth.reduce((all, w) => all + w, 0)
 
       let columnNum = 0
       if (rowsData[0]) {
         columnNum = rowsData[0].ceils.length
-      } else if (header.length) {
-        columnNum = header.length
+      } else if (this.header.length) {
+        columnNum = this.header.length
       }
 
       const avgWidth = (width - usedWidth) / (columnNum - this.columnWidth.length)
@@ -174,31 +128,25 @@ export default {
       this.widths = [...this.columnWidth, ...widths]
     },
     calcHeights(onresize = false) {
-      const { height, mergedConfig, header } = this
-
-      const { rowNum, data } = mergedConfig
+      const { height } = this
 
       let allHeight = height
 
-      if (header.length) allHeight -= this.headerHeight
+      if (this.header.length) allHeight -= this.headerHeight
 
       const avgHeight = allHeight / this.rowNum
 
       this.avgHeight = avgHeight
 
-      if (!onresize) this.heights = new Array(data.length).fill(avgHeight)
+      if (!onresize) this.heights = new Array(this.data.length).fill(avgHeight)
     },
     calcAligns() {
-      const { header, mergedConfig } = this
-
-      const columnNum = header.length
-
+      const columnNum = this.header.length
       let aligns = new Array(columnNum).fill('left')
-
       this.aligns = [...aligns, ...this.align]
     },
     async animation(start = false) {
-      let { avgHeight, animationIndex, mergedConfig, rowsData, animation, updater } = this
+      let { avgHeight, animationIndex, rowsData, animation, updater } = this
 
       const rowLength = rowsData.length
 
@@ -251,7 +199,7 @@ export default {
     }
   },
   destroyed() {
-    stopAnimation()
+    this.stopAnimation()
   }
 }
 </script>
