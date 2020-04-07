@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.14](https://github.com/FatriFE/FatriVueUI/compare/v1.1.13...v1.1.14) (2020-04-07)
+
+
+### Features
+
+* 更换dialog 关闭按钮样式 ([8e10bee](https://github.com/FatriFE/FatriVueUI/commit/8e10beec7b7958d46548797e002ec5c9f95f0ac7))
+* 更新 scroll-table 文档 ([5de81fe](https://github.com/FatriFE/FatriVueUI/commit/5de81fee8659031b1ef66fef4e3e913c1106db86))
+
+
+### Bug Fixes
+
+* dv-scroll-table ([573a99a](https://github.com/FatriFE/FatriVueUI/commit/573a99ad74dfd8e6c1883a1f29a1749a652def45))
+* 解决 webpack 打包报错 ([33c3767](https://github.com/FatriFE/FatriVueUI/commit/33c3767d0e5415e2cc04a5c2a4addc7a61e8c2ff))
+
 ### [1.1.13](https://github.com/FatriFE/FatriVueUI/compare/v1.1.12...v1.1.13) (2020-03-27)
 
 
