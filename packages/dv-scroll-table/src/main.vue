@@ -82,9 +82,6 @@ export default {
       deep: true
     }
   },
-  created() {
-    console.log('demodemodemo')
-  },
   methods: {
     afterAutoResizeMixinInit() {
       this.calcData()
