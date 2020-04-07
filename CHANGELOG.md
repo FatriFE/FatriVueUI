@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.16](https://github.com/FatriFE/FatriVueUI/compare/v1.1.15...v1.1.16) (2020-04-07)
+
+
+### Bug Fixes
+
+* 解决 dialog 的关闭事件失灵问题 ([c207158](https://github.com/FatriFE/FatriVueUI/commit/c207158b7c372dc678f30ee3ba8cfe8566b0abef))
+
 ### [1.1.15](https://github.com/FatriFE/FatriVueUI/compare/v1.1.14...v1.1.15) (2020-04-07)
 
 ### [1.1.14](https://github.com/FatriFE/FatriVueUI/compare/v1.1.13...v1.1.14) (2020-04-07)
