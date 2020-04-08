@@ -1,10 +1,21 @@
 <template>
-  <el-dialog v-bind="$attrs" v-on="$listeners" custom-class="fa-dv-dialog" :visible.sync="show" @close="$emit('update:visible', false)" :show-close="false">
+  <el-dialog
+    v-bind="$attrs"
+    v-on="$listeners"
+    :custom-class="mode === 'dv' ? 'fa-dv-dialog' : mode === 'simple' ? 'fa-custom-dialog-body-mini' : ''"
+    :visible.sync="show"
+    @close="$emit('update:visible', false)"
+    :show-close="mode !== 'dv'"
+  >
     <div slot="title" v-if="!$attrs.title && $slots.title" class="el-dialog__title">
       <slot name="title"></slot>
     </div>
+
     <template v-slot:default>
-      <span class="fa-dialog__close" @click="show = false"></span>
+      <span v-if="mode === 'dv'" class="fa-dialog__close" @click="show = false"></span>
+      <div v-if="mode === 'simple'" class="fa-dialog__header">
+        <slot name="header"></slot>
+      </div>
       <slot></slot>
     </template>
     <div slot="footer" v-if="$slots.footer">
@@ -17,7 +28,14 @@ import DialogMixins from 'fatri-vue-ui/src/mixins/dialog'
 export default {
   name: 'FaDialog',
   mixins: [DialogMixins],
-  inheritAttrs: false
+  inheritAttrs: false,
+  props: {
+    mode: {
+      type: String,
+      default: 'dv',
+      validate: val => ['dv', 'simple', 'normal'].includes(val)
+    }
+  }
 }
 </script>
 
@@ -58,6 +76,28 @@ export default {
     padding: 10px 50px 20px;
     text-align: left;
     color: #ffffff;
+  }
+}
+.fa-custom-dialog-body-mini {
+  .el-dialog {
+    margin-bottom: 0px;
+  }
+  .el-dialog__header {
+    padding: 8px 18px;
+    .el-dialog__headerbtn {
+      top: 10px;
+    }
+  }
+  .el-dialog__body {
+    padding: 0;
+    .fa-dialog__header {
+      background-color: #009999;
+      color: #ffffff;
+      padding: 8px 15px;
+    }
+  }
+  .el-dialog__footer {
+    padding: 0;
   }
 }
 </style>
