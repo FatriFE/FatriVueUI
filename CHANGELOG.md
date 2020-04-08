@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.18](https://github.com/FatriFE/FatriVueUI/compare/v1.1.17...v1.1.18) (2020-04-08)
+
+
+### Features
+
+* dialog 添加mode 参数用于切换不同样式的弹窗 ([d34ec2c](https://github.com/FatriFE/FatriVueUI/commit/d34ec2c85ff5a698678472688da8359c349f9581))
+
 ### [1.1.17](https://github.com/FatriFE/FatriVueUI/compare/v1.1.16...v1.1.17) (2020-04-07)
 
 ### [1.1.16](https://github.com/FatriFE/FatriVueUI/compare/v1.1.15...v1.1.16) (2020-04-07)
