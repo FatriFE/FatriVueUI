@@ -35,7 +35,6 @@ const webpackConfig = {
   },
   devServer: {
     host: 'localhost',
-    port: 8085,
     publicPath: '/',
     hot: true
   },
