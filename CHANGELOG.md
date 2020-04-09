@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.20](https://github.com/FatriFE/FatriVueUI/compare/v1.1.19...v1.1.20) (2020-04-09)
+
+
+### Features
+
+* 添加 dialog header slot ([bfa4c2e](https://github.com/FatriFE/FatriVueUI/commit/bfa4c2e255551b64c8a6567e9743a00da50b0556))
+
 ### [1.1.18](https://github.com/FatriFE/FatriVueUI/compare/v1.1.17...v1.1.18) (2020-04-08)
 
 
