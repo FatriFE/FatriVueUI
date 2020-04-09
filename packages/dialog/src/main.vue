@@ -13,7 +13,7 @@
 
     <template v-slot:default>
       <span v-if="mode === 'dv'" class="fa-dialog__close" @click="show = false"></span>
-      <div v-if="mode === 'simple'" class="fa-dialog__header">
+      <div v-if="mode === 'simple' && $slots.header" class="fa-dialog__header">
         <slot name="header"></slot>
       </div>
       <slot></slot>
