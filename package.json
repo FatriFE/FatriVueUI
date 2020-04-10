@@ -94,6 +94,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.8.7",
+    "async-validator": "^3.2.4",
     "element-ui": "^2.13.0",
     "highlight.js": "^9.18.1",
     "markdown-it": "^10.0.0",

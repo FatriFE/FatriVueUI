@@ -1,0 +1,11 @@
+.valid-table-box {
+  .el-table {
+    overflow: visible;
+    .el-table__body-wrapper {
+      overflow: visible;
+    }
+    .cell {
+      overflow: visible;
+    }
+  }
+}
