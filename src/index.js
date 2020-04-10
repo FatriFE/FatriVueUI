@@ -10,6 +10,8 @@ import DvScrollTable from '../packages/dv-scroll-table/index.js'
 import ScrollNum from '../packages/scroll-num/index.js'
 import Dialog from '../packages/dialog/index.js'
 import Debounce from '../packages/debounce/index.js'
+import ValidTable from '../packages/valid-table/index.js'
+import ValidInput from '../packages/valid-input/index.js'
 
 const components = [
   Input,
@@ -20,7 +22,9 @@ const components = [
   DvScrollTable,
   ScrollNum,
   Dialog,
-  Debounce
+  Debounce,
+  ValidTable,
+  ValidInput
 ]
 
 const install = Vue => {
@@ -44,5 +48,7 @@ export default {
   DvScrollTable,
   ScrollNum,
   Dialog,
-  Debounce
+  Debounce,
+  ValidTable,
+  ValidInput
 }

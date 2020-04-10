@@ -7,5 +7,7 @@
   "dv-scroll-table": "./packages/dv-scroll-table/index",
   "scroll-num": "./packages/scroll-num/index",
   "dialog": "./packages/dialog/index",
-  "debounce": "./packages/debounce/index"
+  "debounce": "./packages/debounce/index",
+  "valid-table": "./packages/valid-table/index",
+  "valid-input": "./packages/valid-input/index"
 }

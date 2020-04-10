@@ -12,18 +12,19 @@ export default {
 
     // time 默认为 1 秒
     const time = typeof props.time === 'number' && props.time > 0 ? props.time : 1000
-
+    // 支持 native 属性而不赋值的写法
+    let isNative = typeof props.native === 'boolean' ? props.native : typeof props.native === 'string' ? true : !!props.native
+    console.log(slots().default[0], slots().default[0].data[isNative ? 'nativeOn' : 'on'])
     // slot 元素的原生事件集合
-    let nativeEvents = (slots().default[0].data && Object.keys(slots().default[0].data)) || []
+    let nativeEvents = (slots().default[0].data[isNative ? 'nativeOn' : 'on'] && Object.keys(slots().default[0].data[isNative ? 'nativeOn' : 'on'])) || []
     // slot 元素的 listeners 事件集合
     let listenersEvents = (slots().default[0].componentOptions.listeners && Object.keys(slots().default[0].componentOptions.listeners)) || []
-    // 支持 native 属性而不赋值的写法
-    let isNative = typeof props.native === 'boolean' ? props.native : true
 
     if (isNative && !nativeEvents.includes(props.event)) {
       warn(true, `native ${props.event} undefined !`)
     } else if (nativeEvents.includes(props.event)) {
-      slots().default[0].data.on[props.event] = debounce(slots().default[0].data.on[props.event], time)
+      console.log(111)
+      slots().default[0].data[isNative ? 'nativeOn' : 'on'][props.event] = debounce(slots().default[0].data[isNative ? 'nativeOn' : 'on'][props.event], time)
     }
 
     if (listenersEvents.includes(props.event) && !props.native) {
