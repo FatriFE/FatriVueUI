@@ -9,6 +9,9 @@ import Ellipsis from '../packages/ellipsis/index.js'
 import DvScrollTable from '../packages/dv-scroll-table/index.js'
 import ScrollNum from '../packages/scroll-num/index.js'
 import Dialog from '../packages/dialog/index.js'
+import Debounce from '../packages/debounce/index.js'
+import ValidTable from '../packages/valid-table/index.js'
+import ValidInput from '../packages/valid-input/index.js'
 
 const components = [
   Input,
@@ -18,7 +21,10 @@ const components = [
   Ellipsis,
   DvScrollTable,
   ScrollNum,
-  Dialog
+  Dialog,
+  Debounce,
+  ValidTable,
+  ValidInput
 ]
 
 const install = Vue => {
@@ -32,7 +38,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '1.1.17',
+  version: '1.1.19',
   install,
   Input,
   Select,
@@ -41,5 +47,8 @@ export default {
   Ellipsis,
   DvScrollTable,
   ScrollNum,
-  Dialog
+  Dialog,
+  Debounce,
+  ValidTable,
+  ValidInput
 }
