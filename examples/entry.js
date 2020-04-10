@@ -27,7 +27,11 @@ import {
   Radio,
   RadioGroup,
   Message,
-  Dialog
+  Dialog,
+  Table,
+  TableColumn,
+  Select,
+  Option
 } from 'element-ui'
 // component
 import MainHeader from './components/header'
@@ -63,6 +67,10 @@ Vue.use(CheckboxGroup)
 Vue.use(Radio)
 Vue.use(RadioGroup)
 Vue.use(Dialog)
+Vue.use(Table)
+Vue.use(TableColumn)
+Vue.use(Select)
+Vue.use(Option)
 Vue.prototype.$message = Message
 
 const router = new VueRouter({

@@ -47,7 +47,16 @@
         },
         {
           "groupName": "LevonHe",
-          "list": []
+          "list": [
+            {
+              "path": "/valid-table",
+              "title": "ValidTable 校验表格"
+            },
+            {
+              "path": "/valid-input",
+              "title": "ValidInput 校验输入框"
+            }
+          ]
         },
         {
           "groupName": "LincLin",
