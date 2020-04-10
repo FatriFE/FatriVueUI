@@ -6,5 +6,6 @@
   "ellipsis": "./packages/ellipsis/index",
   "dv-scroll-table": "./packages/dv-scroll-table/index",
   "scroll-num": "./packages/scroll-num/index",
-  "dialog": "./packages/dialog/index"
+  "dialog": "./packages/dialog/index",
+  "debounce": "./packages/debounce/index"
 }
