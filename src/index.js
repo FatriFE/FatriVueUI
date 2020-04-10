@@ -9,6 +9,7 @@ import Ellipsis from '../packages/ellipsis/index.js'
 import DvScrollTable from '../packages/dv-scroll-table/index.js'
 import ScrollNum from '../packages/scroll-num/index.js'
 import Dialog from '../packages/dialog/index.js'
+import Debounce from '../packages/debounce/index.js'
 import ValidTable from '../packages/valid-table/index.js'
 import ValidInput from '../packages/valid-input/index.js'
 
@@ -21,6 +22,7 @@ const components = [
   DvScrollTable,
   ScrollNum,
   Dialog,
+  Debounce,
   ValidTable,
   ValidInput
 ]
@@ -46,6 +48,7 @@ export default {
   DvScrollTable,
   ScrollNum,
   Dialog,
+  Debounce,
   ValidTable,
   ValidInput
 }
