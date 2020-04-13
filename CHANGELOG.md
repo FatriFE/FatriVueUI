@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.21](https://github.com/FatriFE/FatriVueUI/compare/v1.1.20...v1.1.21) (2020-04-13)
+
+### [1.1.20](https://github.com/FatriFE/FatriVueUI/compare/v1.1.19...v1.1.20) (2020-04-13)
+
+
+### Features
+
+* feat debounce新增 native 属性 ([501ad08](https://github.com/FatriFE/FatriVueUI/commit/501ad08f36bf6544fb500c9e9055681c1a55b359))
+* 合入校验表格组件和校验输入框组件 ([83fe688](https://github.com/FatriFE/FatriVueUI/commit/83fe688cb4e3820d625b1d499b7b16a4bb096bce))
+* 新增 debounce 组件和util/warn 函数 ([6794a65](https://github.com/FatriFE/FatriVueUI/commit/6794a65958b45ead4cdb2fce11b369672f24832e))
+* 更新版本 ([6803f88](https://github.com/FatriFE/FatriVueUI/commit/6803f880bd7b2fb1387679e4a9440a4a68ae5571))
+* 添加 dialog header slot ([bfa4c2e](https://github.com/FatriFE/FatriVueUI/commit/bfa4c2e255551b64c8a6567e9743a00da50b0556))
+
 ### [1.1.19](https://github.com/FatriFE/FatriVueUI/compare/v1.1.19...v1.1.20) (2020-04-09)
 
 
