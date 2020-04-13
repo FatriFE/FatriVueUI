@@ -12,6 +12,7 @@ import Dialog from '../packages/dialog/index.js'
 import Debounce from '../packages/debounce/index.js'
 import ValidTable from '../packages/valid-table/index.js'
 import ValidInput from '../packages/valid-input/index.js'
+import StatusCard from '../packages/status-card/index.js'
 
 const components = [
   Input,
@@ -24,7 +25,8 @@ const components = [
   Dialog,
   Debounce,
   ValidTable,
-  ValidInput
+  ValidInput,
+  StatusCard
 ]
 
 const install = Vue => {
@@ -50,5 +52,6 @@ export default {
   Dialog,
   Debounce,
   ValidTable,
-  ValidInput
+  ValidInput,
+  StatusCard
 }

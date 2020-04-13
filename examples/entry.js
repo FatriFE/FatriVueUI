@@ -33,6 +33,7 @@ import {
   Select,
   Option
 } from 'element-ui'
+import VueClipboard from 'vue-clipboard2'
 // component
 import MainHeader from './components/header'
 import SideNav from './components/side-nav'
@@ -72,6 +73,8 @@ Vue.use(TableColumn)
 Vue.use(Select)
 Vue.use(Option)
 Vue.prototype.$message = Message
+
+Vue.use(VueClipboard)
 
 const router = new VueRouter({
   mode: 'hash',

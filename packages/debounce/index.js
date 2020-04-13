@@ -23,7 +23,6 @@ export default {
     if (isNative && !nativeEvents.includes(props.event)) {
       warn(true, `native ${props.event} undefined !`)
     } else if (nativeEvents.includes(props.event)) {
-      console.log(111)
       slots().default[0].data[isNative ? 'nativeOn' : 'on'][props.event] = debounce(slots().default[0].data[isNative ? 'nativeOn' : 'on'][props.event], time)
     }
 
