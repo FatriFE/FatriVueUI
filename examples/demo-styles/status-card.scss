@@ -1,0 +1,56 @@
+.status-card-list {
+  min-width: 820px;
+  .id-copy {
+    cursor: pointer;
+  }
+  .status-card-btn {
+    margin: 0 5px;
+    color: #ea450e;
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    box-sizing: border-box;
+    &:active,
+    &:hover {
+      text-decoration: none;
+      outline: 0;
+    }
+    &:active {
+      color: #c42c02;
+    }
+    &:hover {
+      color: #f76d36;
+    }
+  }
+  .btn-delete-forbid {
+    color: #999a9a !important;
+    background-color: #ececec !important;
+    cursor: not-allowed !important;
+    &:hover {
+      color: #999a9a !important;
+      border-color: #ececec !important;
+    }
+  }
+  .status-card-row {
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    .status-card-row-label {
+      color: #999;
+      padding: 0 5px;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .status-card-row-value {
+      padding: 0 5px;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
