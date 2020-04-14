@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.22](https://github.com/FatriFE/FatriVueUI/compare/v1.1.21...v1.1.22) (2020-04-14)
+
+
+### Bug Fixes
+
+* 解决debounce 因为 render 重新渲染导致的延迟生效 ([34e9484](https://github.com/FatriFE/FatriVueUI/commit/34e9484a923d83eeb4833d901bd295120e94a2bc))
 
 ### [1.1.21](https://github.com/FatriFE/FatriVueUI/compare/v1.1.20...v1.1.21) (2020-04-13)
 
