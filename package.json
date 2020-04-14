@@ -1,6 +1,6 @@
 {
   "name": "@fatrife/vue-ui",
-  "version": "1.1.13",
+  "version": "1.1.21",
   "description": "A Component Library for Vue.js",
   "main": "lib/fatri-vue-ui.common.js",
   "files": [
@@ -20,7 +20,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "bootstrap": "yarn || npm i",
+    "bootstrap": "yarn install --force",
     "build:file": "node build/bin/build-entry.js & node build/bin/i18n.js",
     "rm": "rimraf examples/fatri-vue-ui & rimraf lib",
     "dev": "npm run build:file && webpack-dev-server --config build/webpack.demo.js & node build/bin/template.js",
@@ -83,7 +83,6 @@
     "standard-version": "^7.1.0",
     "style-loader": "^1.1.3",
     "terser-webpack-plugin": "^2.3.5",
-    "uglifyjs-webpack-plugin": "^2.2.0",
     "uppercamelcase": "^3.0.0",
     "url-loader": "^3.0.0",
     "vue-loader": "^15.9.0",
@@ -95,6 +94,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.8.7",
+    "async-validator": "^3.2.4",
+    "debounce": "^1.2.0",
     "element-ui": "^2.13.0",
     "highlight.js": "^9.18.1",
     "markdown-it": "^10.0.0",
@@ -103,8 +104,9 @@
     "markdown-it-container": "^2.0.0",
     "throttle-debounce": "^2.1.0",
     "transliteration": "^2.1.8",
-    "vue-router": "^3.1.6",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-clipboard2": "^0.3.1",
+    "vue-router": "^3.1.6"
   },
   "peerDependencies": {
     "vue": "^2.6.11"

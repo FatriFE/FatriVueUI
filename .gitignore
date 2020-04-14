@@ -110,3 +110,6 @@ dist
 lib
 
 examples/fatri-vue-ui
+
+# editor setting
+.vscode/

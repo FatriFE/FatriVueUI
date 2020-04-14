@@ -18,7 +18,7 @@
       ]
     },
     {
-      "name": "组件",
+      "name": "基础组件",
       "groups": [
         {
           "groupName": "StarLee",
@@ -42,12 +42,29 @@
             {
               "path": "/dialog",
               "title": "Dialog 弹出框"
+            },
+            {
+              "path": "/debounce",
+              "title": "debounce 组件"
             }
           ]
         },
         {
           "groupName": "LevonHe",
-          "list": []
+          "list": [
+            {
+              "path": "/valid-table",
+              "title": "ValidTable 校验表格"
+            },
+            {
+              "path": "/valid-input",
+              "title": "ValidInput 校验输入框"
+            },
+            {
+              "path": "/status-card",
+              "title": "StatusCard 状态卡片"
+            }
+          ]
         },
         {
           "groupName": "LincLin",
