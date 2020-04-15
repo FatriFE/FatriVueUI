@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.23](https://github.com/FatriFE/FatriVueUI/compare/v1.1.22...v1.1.23) (2020-04-15)
+
+
+### Features
+
+* fa-step-page v1 ([ed6d501](https://github.com/FatriFE/FatriVueUI/commit/ed6d5010049c7a6a57b70e2bc40342009ab136cd))
+* 添加 step-pages 组件用于页面组件切换而不触发路由变化 ([d66c9c4](https://github.com/FatriFE/FatriVueUI/commit/d66c9c49cc727cea7ced2dc3f160e71c6976f4d3))
+
+
+### Bug Fixes
+
+* reslove conflect ([899ba24](https://github.com/FatriFE/FatriVueUI/commit/899ba24db08bf09885fccf2e02a55d0cd1e4030e))
+
 ### [1.1.22](https://github.com/FatriFE/FatriVueUI/compare/v1.1.21...v1.1.22) (2020-04-14)
 
 

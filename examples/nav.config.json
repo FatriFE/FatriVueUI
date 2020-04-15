@@ -46,6 +46,10 @@
             {
               "path": "/debounce",
               "title": "debounce 组件"
+            },
+            {
+              "path": "/step-page",
+              "title": "StepPage 步骤页"
             }
           ]
         },
