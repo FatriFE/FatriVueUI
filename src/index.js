@@ -13,6 +13,7 @@ import Debounce from '../packages/debounce/index.js'
 import ValidTable from '../packages/valid-table/index.js'
 import ValidInput from '../packages/valid-input/index.js'
 import StatusCard from '../packages/status-card/index.js'
+import StepPages from '../packages/step-pages/index.js'
 import ModuleCreateHeader from '../packages/module-create-header/index.js'
 import ModuleDetailHeader from '../packages/module-detail-header/index.js'
 
@@ -29,6 +30,8 @@ const components = [
   ValidTable,
   ValidInput,
   StatusCard,
+  StepPages,
+  StatusCard,
   ModuleCreateHeader,
   ModuleDetailHeader
 ]
@@ -44,7 +47,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '1.1.22',
+  version: '1.1.23',
   install,
   Input,
   Select,
@@ -59,5 +62,6 @@ export default {
   ValidInput,
   StatusCard,
   ModuleCreateHeader,
-  ModuleDetailHeader
+  ModuleDetailHeader,
+  StepPages
 }
