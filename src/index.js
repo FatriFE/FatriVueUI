@@ -14,6 +14,7 @@ import ValidTable from '../packages/valid-table/index.js'
 import ValidInput from '../packages/valid-input/index.js'
 import StatusCard from '../packages/status-card/index.js'
 import ModuleCreateHeader from '../packages/module-create-header/index.js'
+import ModuleDetailHeader from '../packages/module-detail-header/index.js'
 
 const components = [
   Input,
@@ -28,7 +29,8 @@ const components = [
   ValidTable,
   ValidInput,
   StatusCard,
-  ModuleCreateHeader
+  ModuleCreateHeader,
+  ModuleDetailHeader
 ]
 
 const install = Vue => {
@@ -56,5 +58,6 @@ export default {
   ValidTable,
   ValidInput,
   StatusCard,
-  ModuleCreateHeader
+  ModuleCreateHeader,
+  ModuleDetailHeader
 }

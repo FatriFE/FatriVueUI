@@ -10,7 +10,7 @@
     </div>
     <div class="fa-module-create-header-right pull-right">
       <template v-if="btns && btns.length">
-        <el-button class="fa-module-create-btn" v-for="(btn, idx) in btns" :key="idx" type="primary" @click="handleClick(btn)" :disabled="btn.disabled">
+        <el-button class="fa-module-create-btn" size="medium" v-for="(btn, idx) in btns" :key="idx" type="primary" @click="handleClick(btn)" :disabled="btn.disabled">
           <i v-if="btn.icon" :class="btn.icon"></i>
           {{ btn.text }}
         </el-button>
@@ -58,7 +58,7 @@ export default {
     }
   }
   .fa-module-create-header-right {
-    padding: 16px 20px 16px 0;
+    padding: 18px 20px 18px 0;
     .fa-module-create-btn {
       margin-left: 10px;
     }

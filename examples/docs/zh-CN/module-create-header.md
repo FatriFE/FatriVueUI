@@ -44,7 +44,7 @@
 ### Attributes
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
-| header          | 模块标题       | String    |  {}      |    ''    |
+| header          | 模块标题       | Object    |  {}      |    ''    |
 | header.title    | 标题文字       | String    |  --      |    ''    |
 | header.helpTip  | content: 解释文字, position: 悬浮文字的位置     | Object    |  --      |    --    |
 | btns            | 操作按钮       | Array    |  []      |    ''    |
