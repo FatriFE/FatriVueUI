@@ -63,6 +63,14 @@
             {
               "path": "/status-card",
               "title": "StatusCard 状态卡片"
+            },
+            {
+              "path": "/module-create-header",
+              "title": "ModuleCreateHeader 模块主页页头"
+            },
+            {
+              "path": "/module-detail-header",
+              "title": "ModuleDetailHeader 模块详情页头"
             }
           ]
         },
