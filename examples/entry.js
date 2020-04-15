@@ -31,7 +31,9 @@ import {
   Table,
   TableColumn,
   Select,
-  Option
+  Option,
+  Breadcrumb,
+  BreadcrumbItem
 } from 'element-ui'
 import VueClipboard from 'vue-clipboard2'
 // component
@@ -72,6 +74,8 @@ Vue.use(Table)
 Vue.use(TableColumn)
 Vue.use(Select)
 Vue.use(Option)
+Vue.use(Breadcrumb)
+Vue.use(BreadcrumbItem)
 Vue.prototype.$message = Message
 
 Vue.use(VueClipboard)
