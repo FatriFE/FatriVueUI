@@ -12,5 +12,7 @@
   "valid-input": "./packages/valid-input/index",
   "status-card": "./packages/status-card/index",
   "step-pages": "./packages/step-pages/index",
-  "step-page": "./packages/step-page/index"
+  "status-card": "./packages/status-card/index",
+  "module-create-header": "./packages/module-create-header/index",
+  "module-detail-header": "./packages/module-detail-header/index"
 }

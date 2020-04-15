@@ -15,6 +15,8 @@ import ValidInput from '../packages/valid-input/index.js'
 import StatusCard from '../packages/status-card/index.js'
 import StepPages from '../packages/step-pages/index.js'
 import StepPage from '../packages/step-page/index.js'
+import ModuleCreateHeader from '../packages/module-create-header/index.js'
+import ModuleDetailHeader from '../packages/module-detail-header/index.js'
 
 const components = [
   Input,
@@ -30,7 +32,10 @@ const components = [
   ValidInput,
   StatusCard,
   StepPages,
-  StepPage
+  StepPage,
+  StatusCard,
+  ModuleCreateHeader,
+  ModuleDetailHeader
 ]
 
 const install = Vue => {
@@ -58,6 +63,8 @@ export default {
   ValidTable,
   ValidInput,
   StatusCard,
+  ModuleCreateHeader,
+  ModuleDetailHeader,
   StepPages,
   StepPage
 }
