@@ -10,5 +10,6 @@
   "debounce": "./packages/debounce/index",
   "valid-table": "./packages/valid-table/index",
   "valid-input": "./packages/valid-input/index",
-  "status-card": "./packages/status-card/index"
+  "status-card": "./packages/status-card/index",
+  "module-create-header": "./packages/module-create-header/index"
 }

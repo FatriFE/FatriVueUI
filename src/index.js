@@ -13,6 +13,7 @@ import Debounce from '../packages/debounce/index.js'
 import ValidTable from '../packages/valid-table/index.js'
 import ValidInput from '../packages/valid-input/index.js'
 import StatusCard from '../packages/status-card/index.js'
+import ModuleCreateHeader from '../packages/module-create-header/index.js'
 
 const components = [
   Input,
@@ -26,7 +27,8 @@ const components = [
   Debounce,
   ValidTable,
   ValidInput,
-  StatusCard
+  StatusCard,
+  ModuleCreateHeader
 ]
 
 const install = Vue => {
@@ -40,7 +42,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '1.1.21',
+  version: '1.1.22',
   install,
   Input,
   Select,
@@ -53,5 +55,6 @@ export default {
   Debounce,
   ValidTable,
   ValidInput,
-  StatusCard
+  StatusCard,
+  ModuleCreateHeader
 }
