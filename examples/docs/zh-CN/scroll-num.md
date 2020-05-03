@@ -97,3 +97,11 @@
     </script>
 ```
 :::
+
+
+### Attributes
+| 参数          | 说明          | 类型    | 可选值 | 默认值   |
+|---------------|--------------|---------|-------|----------|
+| num           | 滚动的数字    | Number,String  |   -  |  0 |
+| scrollTime    | 滚动到传入数字的时长 | Number,String | - |  3 |
+| numStyle      | 单个滚动数字的样式修改| Object  |   -    | {} , 由于滚动实现方式,需要注意 padding-top 和 padding-bottom 的处理|

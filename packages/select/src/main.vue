@@ -1,5 +1,5 @@
 <template>
-  <div class="spcial-select">
+  <div class="spcial-select" v-clickoutside="handleClose">
     <div>
       <el-button class="spcial-select--left" size="mini" :id="'fatri-select' + id">{{ label }}</el-button>
       <el-button class="spcial-select--right" size="mini" @click="handleShow">
@@ -37,6 +37,26 @@
 import { cloneDeep } from 'lodash'
 export default {
   name: 'FaSelect',
+  directives: {
+    clickoutside: {
+      bind: (el, binding, vnode) => {
+        const documentHandler = e => {
+          if (el.contains(e.target)) {
+            return false
+          }
+          if (binding.expression) {
+            binding.value(e)
+          }
+        }
+        el.__vueClickOutside__ = documentHandler
+        document.addEventListener('click', documentHandler)
+      },
+      unbind: (el, binding) => {
+        document.removeEventListener('click', el.__vueClickOutside__)
+        delete el.__vueClickOutside__
+      }
+    }
+  },
   props: {
     label: {
       type: String,
@@ -84,6 +104,9 @@ export default {
     document.getElementById(`fatri-contain${this.id}`).style.left = document.getElementById(`fatri-select${this.id}`).offsetWidth + 1 + 'px'
   },
   methods: {
+    handleClose() {
+      this.isClick = false
+    },
     handleClick(tab, event) {
       // 切换tab的时候重置
       this.tabIndex = tab.index
