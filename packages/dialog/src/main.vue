@@ -2,7 +2,15 @@
   <el-dialog
     v-bind="$attrs"
     v-on="$listeners"
-    :custom-class="mode === 'dv' ? 'fa-dv-dialog' : mode === 'simple' ? 'fa-custom-dialog-body-mini' : ''"
+    :custom-class="
+      mode === 'dv'
+        ? 'fa-dv-dialog'
+        : mode === 'simple'
+        ? $attrs.title || $slots.title
+          ? 'fa-custom-dialog-body-mini'
+          : 'fa-custom-dialog-body-mini fa-custom-dialog-body-mini--not-header'
+        : ''
+    "
     :visible.sync="show"
     @close="$emit('update:visible', false)"
     :show-close="mode !== 'dv'"
@@ -98,6 +106,14 @@ export default {
   }
   .el-dialog__footer {
     padding: 0;
+  }
+  &.fa-custom-dialog-body-mini--not-header {
+    .el-dialog__header {
+      padding: 0;
+      .el-dialog__close {
+        color: #ffffff;
+      }
+    }
   }
 }
 </style>
