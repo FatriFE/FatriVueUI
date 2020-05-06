@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.24](https://github.com/FatriFE/FatriVueUI/compare/v1.1.20...v1.1.24) (2020-05-06)
+
+
+### Features
+
+* fa-step-page v1 ([ed6d501](https://github.com/FatriFE/FatriVueUI/commit/ed6d5010049c7a6a57b70e2bc40342009ab136cd))
+* fix:dialog 更新dialog title 模块 padding 调整 ([1afdef8](https://github.com/FatriFE/FatriVueUI/commit/1afdef87ef284608d5e0a1027d9e31d7b148b394))
+* iot模块主页页头组件合入 ([6d5ceb9](https://github.com/FatriFE/FatriVueUI/commit/6d5ceb92197c9f81b79297046d8f77fe5965fdcd))
+* 模块详情页头组件合入 ([0500d74](https://github.com/FatriFE/FatriVueUI/commit/0500d74bacdc60cc54c95fc6f216a4f2e714fb3e))
+* 添加 step-pages 组件用于页面组件切换而不触发路由变化 ([d66c9c4](https://github.com/FatriFE/FatriVueUI/commit/d66c9c49cc727cea7ced2dc3f160e71c6976f4d3))
+
+
+### Bug Fixes
+
+* fix: 下拉框点击其他位置自动关闭 ([3c809e4](https://github.com/FatriFE/FatriVueUI/commit/3c809e4950c40d8f643f051be19d94b5509634fc))
+* reslove conflect ([899ba24](https://github.com/FatriFE/FatriVueUI/commit/899ba24db08bf09885fccf2e02a55d0cd1e4030e))
+* 添加属性说明 ([a47d1b5](https://github.com/FatriFE/FatriVueUI/commit/a47d1b5624ec482a588b1122e8c8fce61d00665a))
+* 状态卡片组件合入，增加vue-clipboard2生产依赖 ([454a47f](https://github.com/FatriFE/FatriVueUI/commit/454a47fbe7aa5324d72079cd74158d01e4dceac1))
+* 解决debounce 因为 render 重新渲染导致的延迟生效 ([34e9484](https://github.com/FatriFE/FatriVueUI/commit/34e9484a923d83eeb4833d901bd295120e94a2bc))
+
 ### [1.1.23](https://github.com/FatriFE/FatriVueUI/compare/v1.1.22...v1.1.23) (2020-04-15)
 
 
