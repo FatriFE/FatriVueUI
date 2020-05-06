@@ -31,7 +31,6 @@ const components = [
   ValidInput,
   StatusCard,
   StepPages,
-  StatusCard,
   ModuleCreateHeader,
   ModuleDetailHeader
 ]
@@ -61,7 +60,7 @@ export default {
   ValidTable,
   ValidInput,
   StatusCard,
+  StepPages,
   ModuleCreateHeader,
-  ModuleDetailHeader,
-  StepPages
+  ModuleDetailHeader
 }
