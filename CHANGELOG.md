@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.25](https://github.com/FatriFE/FatriVueUI/compare/v1.1.24...v1.1.25) (2020-05-09)
+
+
+### Features
+
+* ellipsis 修复单行省略组件样式错误问题 ([ef2662b](https://github.com/FatriFE/FatriVueUI/commit/ef2662b93bd5a9db66f4c1fad8fcf3abac8b0879))
+
 ### [1.1.24](https://github.com/FatriFE/FatriVueUI/compare/v1.1.20...v1.1.24) (2020-05-06)
 
 
