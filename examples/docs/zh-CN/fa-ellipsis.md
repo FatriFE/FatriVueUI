@@ -3,7 +3,9 @@
 
 :::demo 
 ```html
-    <fa-ellipsis maxWidth="150" content="定文本为单行/多行溢出显示格式,设定文本为单行/多行溢出显示格式,设定文本为">设定文本为单行/多行溢出显示格式,设定文本为单行/多行溢出显示格式,设定文本为单行/多行溢出显示格式</fa-ellipsis>
+    <fa-ellipsis :maxWidth="150" content="定文本为单行/多行溢出显示格式,设定文本为单行/多行溢出显示格式,设定文本为">
+        设定文本为单行/多行溢出显示格式,设定文本为单行/多行溢出显示格式,设定文本为单行/多行溢出显示格式dsdsdsdsdsdsdsdsdsdsdsdsd
+    </fa-ellipsis>
 ```
 :::
 
