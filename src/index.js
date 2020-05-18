@@ -46,7 +46,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '1.1.25',
+  version: '1.1.26',
   install,
   Input,
   Select,
