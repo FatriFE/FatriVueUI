@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/FatriFE/FatriVueUI/compare/v1.1.25...v1.2.0) (2020-05-19)
+
+
+### Features
+
+* reset fa-select ([22c00a3](https://github.com/FatriFE/FatriVueUI/commit/22c00a32d4c057943981d38c6d60a40e8649b6ec))
+* 更新 ellipsis 组件 ([83b5c70](https://github.com/FatriFE/FatriVueUI/commit/83b5c7009612c7dc3e76a6c51c8bb90f003d1566))
+
 ### [1.1.25](https://github.com/FatriFE/FatriVueUI/compare/v1.1.24...v1.1.25) (2020-05-09)
 
 
