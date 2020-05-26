@@ -13,5 +13,6 @@
   "status-card": "./packages/status-card/index",
   "step-pages": "./packages/step-pages/index",
   "module-create-header": "./packages/module-create-header/index",
-  "module-detail-header": "./packages/module-detail-header/index"
+  "module-detail-header": "./packages/module-detail-header/index",
+  "icon": "./packages/icon/index"
 }

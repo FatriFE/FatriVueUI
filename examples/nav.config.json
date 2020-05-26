@@ -50,6 +50,10 @@
             {
               "path": "/step-page",
               "title": "StepPage 步骤页"
+            },
+            {
+              "path": "/icon",
+              "title": "Icon 图标"
             }
           ]
         },

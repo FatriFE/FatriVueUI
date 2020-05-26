@@ -2,10 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.30](https://github.com/FatriFE/FatriVueUI/compare/v1.1.28...v1.1.30) (2020-05-26)
+
+
+### Features
+
+* change eslintignore ([14c261b](https://github.com/FatriFE/FatriVueUI/commit/14c261b6f92463af4e797249dc0faabd70b20d8c))
+
+### [1.1.29](https://github.com/FatriFE/FatriVueUI/compare/v1.1.28...v1.1.29) (2020-05-26)
+
+
+### Features
+
+* change eslintignore ([14c261b](https://github.com/FatriFE/FatriVueUI/commit/14c261b6f92463af4e797249dc0faabd70b20d8c))
+
+### [1.1.28](https://github.com/FatriFE/FatriVueUI/compare/v1.1.26...v1.1.28) (2020-05-19)
+
 ### [1.1.26](https://github.com/FatriFE/FatriVueUI/compare/v1.2.0...v1.1.26) (2020-05-19)
-
-## [1.2.0](https://github.com/FatriFE/FatriVueUI/compare/v1.1.25...v1.2.0) (2020-05-19)
-
 
 ### Features
 

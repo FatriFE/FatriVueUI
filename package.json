@@ -1,6 +1,6 @@
 {
   "name": "@fatrife/vue-ui",
-  "version": "1.1.26",
+  "version": "1.1.30",
   "description": "A Component Library for Vue.js",
   "main": "lib/fatri-vue-ui.common.js",
   "files": [
