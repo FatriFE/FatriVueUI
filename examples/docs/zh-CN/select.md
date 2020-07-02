@@ -1,6 +1,5 @@
 ## select 下拉框
-基于elementUI 二次封装的 select 组件.
-
+基于elementUI 二次封装的 select 组件. 主要是新增前置 label 
 
 ### 下拉框前置
 
@@ -9,181 +8,48 @@
 
 ```html
     <div style="display: flex;">
-        <fa-select></fa-select>
-        <fa-select :label="label" style="margin-left: 20px"></fa-select>
+        <fa-select label="前置label">
+          <el-option
+              v-for="item in options"
+              :key="item.value"
+              :label="item.label"
+              :value="item.value">
+           </el-option>
+        </fa-select>
     </div>
-    <script>
-        export default {
-            data() {
-                return {
-                    label: '选择设备'
-                }
-            }
-        }
-    </script>
-```
-:::
-
-### 设置下拉框为多选还是单选
-
-:::demo `deviceList` 传入设备列表, 默认下拉显示为单选框, `checkbox`属性修改为多选框
-
-```html
-    <div style="display: flex;">
-        <fa-select :deviceList="deviceList1" ></fa-select>
-        <fa-select :deviceList="deviceList2" checkbox style="margin-left: 20px"></fa-select>
-    </div>
-    <script>
-        export default {
-            data() {
-                return {
-                    deviceList1: [
-                        {
-                            typeId: 1,
-                            name: "应变传感器",
-                            sensorList: [
-                                {sensorId: 101, sensorName: "应变传感器01"},
-                                {sensorId: 102, sensorName: "应变传感器02"},
-                                {sensorId: 103, sensorName: "应变传感器03"},
-                                {sensorId: 104, sensorName: "应变传感器04"},
-                                {sensorId: 105, sensorName: "应变传感器05"},
-                                {sensorId: 106, sensorName: "应变传感器06"}
-                            ],
-                            checkAll: true,
-                            checkedItems: [101],
-                            isIndeterminate: false
-                        },
-                        {
-                            typeId: 2,
-                            name: "静力水准仪",
-                            sensorList: [
-                                {sensorId: 107, sensorName: "静力水准仪01"},
-                                {sensorId: 108, sensorName: "静力水准仪02"},
-                                {sensorId: 109, sensorName: "静力水准仪03"}
-                            ],
-                            checkAll: false,
-                            checkedItems: [],
-                            isIndeterminate: false
-                        }
-                    ],
-                    deviceList2: [
-                        {
-                            typeId: 1,
-                            name: "应变传感器",
-                            sensorList: [
-                                {sensorId: 101, sensorName: "应变传感器01"},
-                                {sensorId: 102, sensorName: "应变传感器02"},
-                                {sensorId: 103, sensorName: "应变传感器03"},
-                                {sensorId: 104, sensorName: "应变传感器04"},
-                                {sensorId: 105, sensorName: "应变传感器05"},
-                                {sensorId: 106, sensorName: "应变传感器06"}
-                            ],
-                            checkAll: true,
-                            checkedItems: [101,102,103,104,105,106],
-                            isIndeterminate: false
-                        },
-                        {
-                            typeId: 2,
-                            name: "静力水准仪",
-                            sensorList: [
-                                {sensorId: 107, sensorName: "静力水准仪01"},
-                                {sensorId: 108, sensorName: "静力水准仪02"},
-                                {sensorId: 109, sensorName: "静力水准仪03"}
-                            ],
-                            checkAll: false,
-                            checkedItems: [],
-                            isIndeterminate: false
-                        }
-                    ]
-                }
-            }
-        }
-    </script>
+   <script>
+     export default {
+       data() {
+         return {
+           options: [{
+             value: '选项1',
+             label: '黄金糕'
+           }, {
+             value: '选项2',
+             label: '双皮奶'
+           }, {
+             value: '选项3',
+             label: '蚵仔煎'
+           }, {
+             value: '选项4',
+             label: '龙须面'
+           }, {
+             value: '选项5',
+             label: '北京烤鸭'
+           }],
+           value: ''
+         }
+       }
+     }
+   </script>
 ```
 :::
 
 
-### 下拉框方法
 
+### Attributes
+| 参数          | 说明          | 类型    | 可选值 | 默认值   |
+|---------------|--------------|---------|-------|----------|
+| label         | 输入框前置内容 | String  |   -   | '选择设备类型'|
 
-:::demo `checked` 为当前组件暴露的方法,返回值是当前选中的 `typeId` 和 `checkedItems`数组组合的对象,`checkedItems`数组内为当前 `typeId` 下选中的 `sensorId`
-
-```html
-    <div style="display: flex;">
-        <fa-select :deviceList="deviceList1" @checked="checkedSensor"></fa-select>
-        <fa-select :deviceList="deviceList2" checkbox style="margin-left: 20px" @checked="checkedSensor"></fa-select>
-    </div>
-    <script>
-        export default {
-            data() {
-                return {
-                    deviceList1: [
-                        {
-                            typeId: 1,
-                            name: "应变传感器",
-                            sensorList: [
-                                {sensorId: 101, sensorName: "应变传感器01"},
-                                {sensorId: 102, sensorName: "应变传感器02"},
-                                {sensorId: 103, sensorName: "应变传感器03"},
-                                {sensorId: 104, sensorName: "应变传感器04"},
-                                {sensorId: 105, sensorName: "应变传感器05"},
-                                {sensorId: 106, sensorName: "应变传感器06"}
-                            ],
-                            checkAll: true,
-                            checkedItems: [101],
-                            isIndeterminate: false
-                        },
-                        {
-                            typeId: 2,
-                            name: "静力水准仪",
-                            sensorList: [
-                                {sensorId: 107, sensorName: "静力水准仪01"},
-                                {sensorId: 108, sensorName: "静力水准仪02"},
-                                {sensorId: 109, sensorName: "静力水准仪03"}
-                            ],
-                            checkAll: false,
-                            checkedItems: [],
-                            isIndeterminate: false
-                        }
-                    ],
-                    deviceList2: [
-                        {
-                            typeId: 1,
-                            name: "应变传感器",
-                            sensorList: [
-                                {sensorId: 101, sensorName: "应变传感器01"},
-                                {sensorId: 102, sensorName: "应变传感器02"},
-                                {sensorId: 103, sensorName: "应变传感器03"},
-                                {sensorId: 104, sensorName: "应变传感器04"},
-                                {sensorId: 105, sensorName: "应变传感器05"},
-                                {sensorId: 106, sensorName: "应变传感器06"}
-                            ],
-                            checkAll: true,
-                            checkedItems: [101,102,103,104,105,106],
-                            isIndeterminate: false
-                        },
-                        {
-                            typeId: 2,
-                            name: "静力水准仪",
-                            sensorList: [
-                                {sensorId: 107, sensorName: "静力水准仪01"},
-                                {sensorId: 108, sensorName: "静力水准仪02"},
-                                {sensorId: 109, sensorName: "静力水准仪03"}
-                            ],
-                            checkAll: false,
-                            checkedItems: [],
-                            isIndeterminate: false
-                        }
-                    ]
-                }
-            },
-            methods: {
-                checkedSensor(val) {
-                    console.log(val)
-                }
-            }
-        }
-    </script>
-```
-:::
-
+> 其他参数和事件参照 el-select

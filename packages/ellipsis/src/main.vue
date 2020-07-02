@@ -2,7 +2,7 @@
   <div v-if="show" class="fa-ellipsis">
     <span ref="hiddenDom" class="fa-ellipsis--hidden">{{ content }}</span>
     <el-tooltip v-if="realWidth > maxWidth" v-bind="$attrs" :content="content" v-on="$listeners">
-      <div :style="computedStyle" class="fa-ellipsis__text" :class="parseInt(Number(row)) > 1 ? 'ellipsis--multi' : 'ellipsis--single'">
+      <div :style="computedStyle" class="fa-ellipsis__text" :class="parseInt(Number(row)) > 1 ? 'fa-ellipsis--multi' : 'fa-ellipsis--single'">
         <slot></slot>
       </div>
     </el-tooltip>
@@ -24,7 +24,7 @@ export default {
       default: ''
     },
     maxWidth: {
-      type: [Number, String],
+      type: Number,
       default: 80
     }
   },
@@ -38,7 +38,7 @@ export default {
     computedStyle() {
       const style = {}
       if (parseInt(Number(this.row)) === 1) {
-        style.width = this.maxWidth ? (typeof this.maxWidth === 'number' ? this.maxWidth + 'px' : this.maxWidth.includes('px') ? this.maxWidth : this.maxWidth + 'px') : '80px'
+        style.width = this.maxWidth ? (typeof this.maxWidth === 'number' ? this.maxWidth + 'px' : this.maxWidth) : '80px'
       }
       if (parseInt(Number(this.row)) > 1) {
         style['-webkit-line-clamp'] = this.row
