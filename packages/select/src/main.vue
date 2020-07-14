@@ -49,6 +49,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.input-select {
+  /deep/ .el-input__inner {
+    color: #cccccc !important;
+  }
+}
 .fa-select {
   display: flex;
   /deep/ .el-input__inner {

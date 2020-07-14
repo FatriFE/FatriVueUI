@@ -22,6 +22,9 @@
        data() {
          return {
            options: [{
+             value: null,
+             label: '全部'
+           },{
              value: '选项1',
              label: '黄金糕'
            }, {
