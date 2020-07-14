@@ -54,6 +54,7 @@ export default {
     color: #cccccc !important;
   }
 }
+
 .fa-select {
   display: flex;
   /deep/ .el-input__inner {
