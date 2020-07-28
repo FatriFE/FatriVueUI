@@ -1,8 +1,0 @@
-language: node_js
-node_js:
-  - 12
-branches:
-  only:
-    - master
-install: true
-script: npm run deploy:web
