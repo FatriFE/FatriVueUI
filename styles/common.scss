@@ -150,6 +150,25 @@ button, input, select, textarea {
 .demo {
   margin: 20px 0;
 }
+
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
+
+
 @media (max-width: 1140px) {
   .container,
   .page-container {
