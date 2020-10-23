@@ -1,4 +1,4 @@
-<style el="scss">
+<style lang="scss">
   .page-guide {
     padding: 55px 30px 95px;
     box-sizing: border-box;
