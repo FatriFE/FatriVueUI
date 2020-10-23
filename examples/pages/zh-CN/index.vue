@@ -291,11 +291,11 @@
       </div>
     </div>
     <div class="jumbotron" ref="indexMainImg">
-      <img src="/images/theme-index-blue.png" alt="">
+      <img src="/FatriVueUI/images/theme-index-blue.png" alt="">
       <div class="jumbotron-red" :style="{
            height: mainImgOffset + 'px'
          }">
-        <img src="/images/theme-index-red.png" alt="">
+        <img src="/FatriVueUI/images/theme-index-red.png" alt="">
       </div>
     </div>
 
@@ -303,7 +303,7 @@
       <ul class="container">
         <li>
           <div class="card">
-            <img src="/images/guide.png" alt="">
+            <img src="/FatriVueUI/images/guide.png" alt="">
             <h3>指南</h3>
             <p>了解设计指南，帮助产品设计人员搭建逻辑清晰、结构合理且高效易用的产品。</p>
             <router-link
@@ -315,7 +315,7 @@
         </li>
         <li>
           <div class="card">
-            <img src="/images/component.png" alt="">
+            <img src="/FatriVueUI/images/component.png" alt="">
             <h3>组件</h3>
             <p>使用组件 Demo 快速体验交互细节；使用前端框架封装的代码帮助工程师快速开发。</p>
             <router-link
@@ -327,7 +327,7 @@
         </li>
         <li>
           <div class="card">
-            <img src="/images/theme-index-icon.svg" alt="">
+            <img src="/FatriVueUI/images/theme-index-icon.svg" alt="">
             <h3>主题</h3>
             <p>在线主题编辑器，可视化定制和管理站点主题、组件样式</p>
             <router-link
@@ -339,7 +339,7 @@
         </li>
         <li>
           <div class="card">
-            <img src="/images/resource.png" alt="">
+            <img src="/FatriVueUI/images/resource.png" alt="">
             <h3>资源</h3>
             <p>下载相关资源，用其快速搭建页面原型或高保真视觉稿，提升产品设计效率。</p>
             <router-link

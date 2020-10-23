@@ -5,8 +5,8 @@
         <router-link :to="`/${lang}`">
           <!-- logo -->
           <slot>
-            <img src="/images/all.png" alt="element-logo" class="nav-logo" />
-            <img src="/images/icon-only.png" alt="element-logo" class="nav-logo-small" />
+            <img src="/FatriVueUI/images/all.png" alt="element-logo" class="nav-logo" />
+            <img src="/FatriVueUI/images/icon-only.png" alt="element-logo" class="nav-logo-small" />
           </slot>
         </router-link>
         <ul class="nav">
